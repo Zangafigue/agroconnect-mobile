@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConnect BF - Profil Producteur</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<!-- Tailwind Configuration for Dark Theme -->
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#22c55e', // Green-500
+              dark: '#111827',    // Gray-900
+              card: '#1f2937',    // Gray-800
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #111827;
+      color: #f3f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .safe-area-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    /* Hide scrollbar for cleaner mobile look */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-brand-dark min-h-screen pb-24">
+<!-- BEGIN: MainHeader -->
+<header class="flex justify-end items-center p-4 sticky top-0 bg-brand-dark z-50" data-purpose="header-navigation">
+<button aria-label="Paramètres" class="p-2 rounded-full hover:bg-gray-800 transition-colors">
+<span class="material-icons text-gray-300">settings</span>
+</button>
+</header>
+<!-- END: MainHeader -->
+<main class="px-4 space-y-6">
+<!-- BEGIN: ProfileHeader -->
+<section class="flex flex-col items-center text-center" data-purpose="profile-identity">
+<!-- Profile Picture Container -->
+<div class="relative mb-3">
+<img alt="Amadou Kaboré" class="w-20 h-20 rounded-full border-2 border-brand-primary object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwThozbEWnf7qyGbZuNjzigVKzH3ODeYOrtNcF9D3m-sBfEQjbu84y0C_ZGbI3FfljR_5kDBXpAfKCLWzU_JU5wT4pJK5cQz1gdRyY5gVm4r2u5oxsl56P7EgdPukzcE4fPqBu1kjVG9G69FkOCDXROCVl2mKjd027P1Ler0r984EA-HnX_kCIVI2rKGGSTDoLASSM-1j1KmQ42_gqzAcdHiynAIQOfaPPVDdyetROMkLGjayKnrNTsHpdEEt9hDDPTcRXxbgfCb8"/>
+</div>
+<!-- Name and Badge -->
+<h1 class="text-xl font-bold text-white">Amadou Kaboré</h1>
+<span class="mt-1 px-3 py-0.5 bg-green-900/40 text-brand-primary text-xs font-semibold rounded-full border border-brand-primary/30">
+        Agriculteur
+      </span>
+<!-- Reputation -->
+<div class="flex items-center mt-2 space-x-1" data-purpose="rating-display">
+<div class="flex">
+<span class="material-icons text-yellow-500 text-lg">star</span>
+<span class="material-icons text-yellow-500 text-lg">star</span>
+<span class="material-icons text-yellow-500 text-lg">star</span>
+<span class="material-icons text-yellow-500 text-lg">star</span>
+<span class="material-icons text-yellow-500 text-lg">star</span>
+</div>
+<span class="text-sm text-gray-400 ml-1">34 avis</span>
+</div>
+</section>
+<!-- END: ProfileHeader -->
+<!-- BEGIN: MesInformations -->
+<section class="bg-brand-card rounded-2xl p-5 shadow-lg" data-purpose="user-info-section">
+<h2 class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Mes informations</h2>
+<div class="space-y-4">
+<!-- Phone -->
+<div class="flex items-center space-x-4">
+<div class="bg-gray-700/50 p-2 rounded-lg">
+<span class="material-icons text-brand-primary text-xl">phone</span>
+</div>
+<div>
+<p class="text-xs text-gray-400">Téléphone</p>
+<p class="text-sm font-medium">+226 70 00 00 00</p>
+</div>
+</div>
+<!-- Location -->
+<div class="flex items-center space-x-4">
+<div class="bg-gray-700/50 p-2 rounded-lg">
+<span class="material-icons text-brand-primary text-xl">location_on</span>
+</div>
+<div>
+<p class="text-xs text-gray-400">Localisation</p>
+<p class="text-sm font-medium">Bobo-Dioulasso</p>
+</div>
+</div>
+<!-- Specialty -->
+<div class="flex items-center space-x-4">
+<div class="bg-gray-700/50 p-2 rounded-lg">
+<span class="material-icons text-brand-primary text-xl">agriculture</span>
+</div>
+<div>
+<p class="text-xs text-gray-400">Spécialité</p>
+<p class="text-sm font-medium">Céréales, Légumes</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MesInformations -->
+<!-- BEGIN: MesCapacites -->
+<section class="bg-brand-card rounded-2xl p-5 shadow-lg" data-purpose="capabilities-toggle-section">
+<h2 class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Mes capacités</h2>
+<div class="space-y-5">
+<!-- Toggle Buy -->
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Je peux aussi acheter des produits</span>
+<button class="w-12 h-6 flex items-center bg-brand-primary rounded-full p-1 transition-colors duration-200" data-purpose="toggle-active">
+<div class="bg-white w-4 h-4 rounded-full shadow-md transform translate-x-6"></div>
+</button>
+</div>
+<!-- Toggle Deliver -->
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-gray-300">Je peux aussi livrer des produits</span>
+<button class="w-12 h-6 flex items-center bg-gray-600 rounded-full p-1 transition-colors duration-200" data-purpose="toggle-inactive">
+<div class="bg-white w-4 h-4 rounded-full shadow-md transform translate-x-0"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- END: MesCapacites -->
+<!-- BEGIN: MonPortefeuille -->
+<section class="bg-green-100/10 border border-green-500/20 rounded-2xl p-5 shadow-lg" data-purpose="wallet-summary">
+<div class="flex justify-between items-start mb-4">
+<h2 class="text-sm font-bold uppercase tracking-wider text-green-400">Mon portefeuille</h2>
+<span class="material-icons text-green-400">account_balance_wallet</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-xs text-gray-400">Disponible</p>
+<p class="text-lg font-bold text-white leading-tight">185 000 <span class="text-xs">FCFA</span></p>
+</div>
+<div>
+<p class="text-xs text-gray-400">En attente</p>
+<p class="text-lg font-bold text-gray-300 leading-tight">485 000 <span class="text-xs">FCFA</span></p>
+</div>
+</div>
+<button class="w-full bg-brand-primary text-brand-dark font-bold py-3 rounded-xl flex items-center justify-center space-x-2 active:scale-95 transition-transform" data-purpose="view-wallet-btn">
+<span>Voir mon portefeuille complet</span>
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+</section>
+<!-- END: MonPortefeuille -->
+</main>
+<!-- BEGIN: BottomNavbar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-brand-card border-t border-gray-700/50 flex justify-between items-center px-6 py-3 safe-area-bottom z-50" data-purpose="bottom-navigation">
+<button class="flex flex-col items-center space-y-1 text-gray-500">
+<span class="material-icons">home</span>
+<span class="text-[10px]">Accueil</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-gray-500">
+<span class="material-icons">inventory_2</span>
+<span class="text-[10px]">Produits</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-gray-500">
+<span class="material-icons">shopping_cart</span>
+<span class="text-[10px]">Commandes</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-gray-500">
+<span class="material-icons">chat</span>
+<span class="text-[10px]">Messages</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-brand-primary">
+<span class="material-icons">person</span>
+<span class="text-[10px]">Profil</span>
+</button>
+</nav>
+<!-- END: BottomNavbar -->
+</body></html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0a0a0a",
+                        "card-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>AgroConnect BF - Dashboard Agriculteur</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">grass</span>
+<h1 class="text-xl font-bold tracking-tight text-primary">AgroConnect BF</h1>
+</div>
+<div class="relative">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+</button>
+<span class="absolute top-2 right-2 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+</span>
+</div>
+</header>
+<main class="max-w-md mx-auto px-4 pt-6 space-y-8">
+<!-- Salutation Section -->
+<section>
+<div class="flex items-center gap-2">
+<h2 class="text-2xl font-bold">Bonjour, Amadou</h2>
+<span class="material-symbols-outlined text-yellow-500 animate-pulse">waving_hand</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 mt-1">3 nouvelles commandes en attente</p>
+</section>
+<!-- Stats Grid 2x2 -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-slate-100 dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-blue-500 mb-2">inventory_2</span>
+<p class="text-3xl font-bold">8</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Produits publiés</p>
+</div>
+<div class="bg-slate-100 dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-orange-500 mb-2">shopping_cart</span>
+<p class="text-3xl font-bold text-orange-500">3</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">En attente</p>
+</div>
+<div class="bg-slate-100 dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary mb-2">check_circle</span>
+<p class="text-3xl font-bold">24</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Commandes livrées</p>
+</div>
+<div class="bg-slate-100 dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-yellow-500 mb-2">account_balance_wallet</span>
+<p class="text-xl font-bold">185 000</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">FCFA Disponible</p>
+</div>
+</section>
+<!-- Urgent Orders Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold">Commandes urgentes</h3>
+<span class="bg-red-500/10 text-red-500 text-xs font-bold px-2 py-1 rounded-full border border-red-500/20">3 en attente</span>
+</div>
+<div class="bg-slate-100 dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-4 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Commande #045</p>
+<h4 class="font-bold text-lg">Fatima Traoré</h4>
+</div>
+<span class="text-primary font-bold">500 000 FCFA</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-sm">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">potted_plant</span>
+                            Maïs sec
+                        </div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">weight</span>
+                            100 sacs
+                        </div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 col-span-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Ouaga Secteur 15
+                        </div>
+</div>
+<div class="flex gap-3 pt-2">
+<button class="flex-1 py-2 px-4 rounded-lg border border-red-500 text-red-500 font-bold text-sm hover:bg-red-500/10 transition-colors">
+                            Refuser
+                        </button>
+<button class="flex-1 py-2 px-4 rounded-lg bg-primary text-white font-bold text-sm hover:opacity-90 transition-opacity">
+                            Confirmer
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Products Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold">Mes produits récents</h3>
+<button class="text-primary text-sm font-medium">Voir tout</button>
+</div>
+<div class="space-y-3">
+<!-- Product 1 -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-card-dark p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="w-16 h-16 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of dry yellow corn seeds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA62t826SAs2o1zAR2WZv1g2uIuhp7drwXTuzSvLY3TPHkV8Jl0YUfLVR0641VJvD-bOWkvtjy_x_22xSOwkNoIGXx8zzups9KrldDEiojY5n1vAQG_OCnyHYIToOO-JnbHKergIEtOtH9xXpCX52NoGhzsQ6COTTE2nNH15B4rjQI7BPgChWtsgN1MXHfjHJnhtolt2RQl9CaxWl7gqkZOL8rEYUni1T2hGX2pIBd1ySaEBcd2_AjIEYEjwq0bW2xMu9l9AkWutJ0"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h5 class="font-bold">Maïs sec</h5>
+<span class="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full font-medium">Disponible</span>
+</div>
+<p class="text-sm text-slate-500">5 000 FCFA / Sac</p>
+<p class="text-xs text-slate-400 mt-1">Stock: 450 sacs</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-card-dark p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="w-16 h-16 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="White sorghum grains in a bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbRmwzSeDPH6YS2vZSOqmwyAE0QtpkOKrouxoKQ9D0WvVhiQWDDmD-P3OR07jpPcFWSgXSggqGNwzIJD-Y4sjU79NOmCHGjLvrbAWarVmXIWMcbUynm92Jo4t8Pc1CDof3H0OMLBSJ02WgWZLwk6kQnM0YLhyUPCPL5ZoRvlzJZ76p9FX_BfblZ2zBioBRW2aohkKHRhgqfSn8rnZ0zCgrOJCQBRQvDjD8hdxp1uIg1CiQF7xYyLIbgbN8hdu42U4yxM5jPrwSFNg"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h5 class="font-bold">Sorgho blanc</h5>
+<span class="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full font-medium">Disponible</span>
+</div>
+<p class="text-sm text-slate-500">4 500 FCFA / Sac</p>
+<p class="text-xs text-slate-400 mt-1">Stock: 120 sacs</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-card-dark p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="w-16 h-16 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Shelled peanuts in a wooden bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqEm4354eC5eXR4B_qvLhGVIxf3RjfX14rv51FBE71zhYh3Y0Ys4wkTbYRSJS1MatyLuCPXmzwDXFet-mtNFW0sVSAc2-f8hJrPMi4IyU70G0CjcwWu8pWAE45SS1xQ5iSmFQpu1qA0QGEYLnndtwRVQynXV1MP5tvxOtA3UrgAvyFsulHMVbJl75e5wUaskUQx-LbeCvKvirg1r5DFUgD6WwCK2qwuMMUaZC3yITJos1dPEh4mOINN9U_8gbBfpitZJwHnBUQTTA"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h5 class="font-bold">Arachides</h5>
+<span class="text-xs bg-red-500/20 text-red-500 px-2 py-0.5 rounded-full font-medium">Rupture</span>
+</div>
+<p class="text-sm text-slate-500">8 000 FCFA / Sac</p>
+<p class="text-xs text-slate-400 mt-1">Stock: 0 sacs</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center z-40 hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-card-dark border-t border-slate-200 dark:border-slate-800 px-2 py-3 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">inventory</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Produits</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-relative">
+                    shopping_bag
+                </span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Commandes</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>

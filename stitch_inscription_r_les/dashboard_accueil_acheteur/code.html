@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .fill-icon { font-variation-settings: 'FILL' 1; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex items-center justify-between border-b border-slate-200 dark:border-primary/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600 dark:text-green-500 font-bold">grass</span>
+<h1 class="text-xl font-bold text-green-600 dark:text-green-500">AgroConnect BF</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-1">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+<span class="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-background-light dark:ring-background-dark"></span>
+</button>
+<button class="p-1">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">search</span>
+</button>
+</div>
+</header>
+<main class="px-4 py-6 space-y-6">
+<!-- Greeting -->
+<section>
+<h2 class="text-2xl font-bold dark:text-white">Bonjour, Fatima</h2>
+<p class="text-slate-500 dark:text-slate-400">Que cherchez-vous aujourd'hui?</p>
+</section>
+<!-- Large Search Bar -->
+<section>
+<div class="relative flex items-center h-12 w-full bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
+<span class="material-symbols-outlined ml-4 text-slate-400">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 px-3 h-full" placeholder="Rechercher un produit, une ville..." type="text"/>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-2 gap-3">
+<div class="bg-primary/5 dark:bg-primary/10 p-4 rounded-xl border border-primary/10">
+<span class="material-symbols-outlined text-primary mb-2">shopping_cart</span>
+<p class="text-2xl font-bold dark:text-white">5</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Commandes en cours</p>
+</div>
+<div class="bg-blue-500/5 dark:bg-blue-500/10 p-4 rounded-xl border border-blue-500/10">
+<span class="material-symbols-outlined text-blue-500 mb-2">local_shipping</span>
+<p class="text-2xl font-bold dark:text-white">1</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">En cours de livraison</p>
+</div>
+<div class="bg-green-500/5 dark:bg-green-500/10 p-4 rounded-xl border border-green-500/10">
+<span class="material-symbols-outlined text-green-500 mb-2">check_circle</span>
+<p class="text-2xl font-bold dark:text-white">18</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Commandes livrées</p>
+</div>
+<div class="bg-amber-500/5 dark:bg-amber-500/10 p-4 rounded-xl border border-amber-500/10">
+<span class="material-symbols-outlined text-amber-500 mb-2">account_balance_wallet</span>
+<p class="text-2xl font-bold dark:text-white text-nowrap">0 FCFA</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Portefeuille</p>
+</div>
+</section>
+<!-- Active Delivery Card -->
+<section>
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold dark:text-white">Ma livraison en cours</h3>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl overflow-hidden border border-blue-100 dark:border-blue-900/30">
+<div class="p-4 flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-blue-700 dark:text-blue-300">Commande #045</p>
+<p class="text-slate-600 dark:text-slate-300 mt-1">Koné Dramane en route</p>
+</div>
+<span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">local_shipping</span>
+                        EN LIVRAISON
+                    </span>
+</div>
+<!-- Map Placeholder -->
+<div class="h-[160px] relative bg-slate-200 dark:bg-slate-700 flex items-center justify-center overflow-hidden" data-location="Burkina Faso" style="">
+<div class="absolute inset-0 opacity-40 grayscale pointer-events-none bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&amp;fit=crop&amp;q=80&amp;w=1000')] bg-cover" data-alt="Carte schématique simplifiée du Burkina Faso"></div>
+<div class="relative w-full px-12 flex items-center justify-between">
+<div class="w-3 h-3 bg-green-500 rounded-full ring-4 ring-green-500/30 flex items-center justify-center">
+<span class="absolute -bottom-6 text-[10px] font-bold dark:text-white">Bobo</span>
+</div>
+<div class="flex-1 h-0.5 border-t-2 border-dashed border-blue-500 relative flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400 bg-white dark:bg-slate-800 rounded-full p-1 text-sm">local_shipping</span>
+</div>
+<div class="w-3 h-3 bg-red-500 rounded-full ring-4 ring-red-500/30 flex items-center justify-center">
+<span class="absolute -bottom-6 text-[10px] font-bold dark:text-white">Ouaga</span>
+</div>
+</div>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex gap-2">
+<span class="bg-white/50 dark:bg-slate-800 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">distance</span> 360 km
+                        </span>
+<span class="bg-white/50 dark:bg-slate-800 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">schedule</span> ~2h restant
+                        </span>
+<span class="bg-white/50 dark:bg-slate-800 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">weight</span> 500 kg
+                        </span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 h-10 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined text-base">call</span> Contacter
+                        </button>
+<button class="flex items-center justify-center gap-2 h-10 bg-blue-600 text-white rounded-lg text-sm font-bold">
+                             Voir détail
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommended Products -->
+<section>
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold dark:text-white">Produits recommandés</h3>
+<a class="text-primary text-sm font-bold flex items-center gap-1" href="#">
+                    Voir le catalogue <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Product 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="h-32 bg-slate-200 relative">
+<img alt="Maïs sec" class="w-full h-full object-cover" data-alt="Sac de maïs sec jaune de qualité" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXelAcXKVVFgMwbNh9xDfnOTQJ1r16VRL39-dQBefaRHxpbU2dGDOlYSAlsC0d71AG09Y81Z12C_G63H0KgLgy_63PrKYM6Natj15P2I4HuYLH9hUPOYI1Lf_FQs2W-Lk_NCVD5Fwd5VzvyhtJIz9LaMNX1qQ4G2U6ykcGJVlQgy0vp5-mO9SWdx0lLQ1LwITIc4AnZvN4vJaC4Ypg8l40GA6pywIX4GqdXCop-KdOT9PQO0LfPEN9xKC-n97IZeRs_ZyThdQyYRk"/>
+<span class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 p-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-sm text-slate-400">favorite</span>
+</span>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm truncate dark:text-white">Maïs sec extra</h4>
+<p class="text-primary font-bold text-sm mt-1">18,500 FCFA <span class="text-[10px] text-slate-400 font-normal">/sac</span></p>
+<div class="flex items-center gap-1 text-[10px] text-slate-500 dark:text-slate-400 mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Bobo-Dioulasso
+                        </div>
+<button class="w-full mt-3 bg-primary/10 hover:bg-primary/20 text-primary py-2 rounded-lg text-xs font-bold transition-colors">Commander</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="h-32 bg-slate-200 relative">
+<img alt="Sorgho blanc" class="w-full h-full object-cover" data-alt="Grains de sorgho blanc dans un récipient" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0x52saQXMbo8YExeJ8IDWZOTitwXF6w_4I-3Y8pMX35ERDLkb4HUzkrgigV_KrizDdGDCdFHuc-EFTSv7CxgnXg2K0g8gWQkaQfdRd9UPavgcBGsrC9N2vzcBV4lcgxc2909GXdgRIfJWtx0-eVKcbsZjbEiAQSL8fEqCAsi9UmaEggLJElh3lLHNGumBsprZuhLBXbzfReGZ7LQIoHgdFrInTe4SCoDtFeTS6EuTRYJ2Yi_w20Grxabr3DiRs7gChKeTi4JupB8"/>
+<span class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 p-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-sm text-slate-400">favorite</span>
+</span>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm truncate dark:text-white">Sorgho blanc</h4>
+<p class="text-primary font-bold text-sm mt-1">22,000 FCFA <span class="text-[10px] text-slate-400 font-normal">/sac</span></p>
+<div class="flex items-center gap-1 text-[10px] text-slate-500 dark:text-slate-400 mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Dédougou
+                        </div>
+<button class="w-full mt-3 bg-primary/10 hover:bg-primary/20 text-primary py-2 rounded-lg text-xs font-bold transition-colors">Commander</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="h-32 bg-slate-200 relative">
+<img alt="Arachides" class="w-full h-full object-cover" data-alt="Arachides grillées dans un panier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh0K2L8qOgAAOgJ4-a0on1N4ftURtiCV5jZGJni2hOUsH_hq-CEk_1G2BAKLEca9pgvSzEs8PjUOyuPh3a9zjfDHNyBE6LOivo0kh09bVNZqzRZFTS6jdI8SSoa1p0BYkvxHax39omN_BfdHJUo-gsqgnkCwVuU52bWWvwCcAYJX1-_pYMpM__13IEWJqfXb8UDulgh_0KqXHypoS0IAfoAAuzPPGdK1oF-7Re-6G31zl1nNbgT6cTuOL9clPW3Sf6sgoZM0eBCR0"/>
+<span class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 p-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-sm text-slate-400">favorite</span>
+</span>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm truncate dark:text-white">Arachides coques</h4>
+<p class="text-primary font-bold text-sm mt-1">15,000 FCFA <span class="text-[10px] text-slate-400 font-normal">/sac</span></p>
+<div class="flex items-center gap-1 text-[10px] text-slate-500 dark:text-slate-400 mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Banfora
+                        </div>
+<button class="w-full mt-3 bg-primary/10 hover:bg-primary/20 text-primary py-2 rounded-lg text-xs font-bold transition-colors">Commander</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="h-32 bg-slate-200 relative">
+<img alt="Niébé" class="w-full h-full object-cover" data-alt="Gros plan sur des graines de niébé" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAemiHqzlGdSVIrvTk4leYhM1MMvArvbJFnv-3TOSb8q-Nx5vCO7JHbgg_HQgF0rj1LUgPFx6G1pGQhFrBgbV0A90gwLz_ag8lbew8nEyb3Ru6LI8tS19KqsVweiR5R8l6oKtbjCmiOumGaVrjZ7t_elSJeTQVyRp9wpEGMZnHva_-zLluRDnPtJyTBXOnbDh1P0SGZMlBXLLShRt_eaPZwb-mHhGsx-l8TmNMe2GX-Ye_ZHR1bhG-ksYSEVwk4ThELUNMA4wh_iqI"/>
+<span class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 p-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-sm text-slate-400">favorite</span>
+</span>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm truncate dark:text-white">Niébé rouge</h4>
+<p class="text-primary font-bold text-sm mt-1">28,000 FCFA <span class="text-[10px] text-slate-400 font-normal">/sac</span></p>
+<div class="flex items-center gap-1 text-[10px] text-slate-500 dark:text-slate-400 mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Ouahigouya
+                        </div>
+<button class="w-full mt-3 bg-primary/10 hover:bg-primary/20 text-primary py-2 rounded-lg text-xs font-bold transition-colors">Commander</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navbar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-primary/10 flex justify-around py-3 px-2 z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-icon">home</span>
+<span class="text-[10px] font-bold">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-medium">Catalogue</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-[10px] font-medium">Commandes</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</nav>
+</body></html>

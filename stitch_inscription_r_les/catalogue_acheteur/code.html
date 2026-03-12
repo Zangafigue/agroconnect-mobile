@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark border-b border-primary/20 p-4">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<h1 class="text-xl font-bold tracking-tight">Catalogue</h1>
+<div class="relative">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">notifications</span>
+<span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-background-dark"></span>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="flex gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-primary/10 border-none rounded-lg py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary placeholder:text-slate-500" placeholder="Rechercher un produit..." type="text"/>
+</div>
+<button class="bg-primary/20 text-primary p-2.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</header>
+<!-- Quick Filters -->
+<div class="flex gap-2 overflow-x-auto px-4 py-3 scrollbar-hide no-scrollbar">
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-primary text-white text-sm font-medium">Tous</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-primary/10 text-slate-600 dark:text-slate-300 text-sm font-medium border border-primary/20">Céréales</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-primary/10 text-slate-600 dark:text-slate-300 text-sm font-medium border border-primary/20">Légumes</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-primary/10 text-slate-600 dark:text-slate-300 text-sm font-medium border border-primary/20">Fruits</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-primary/10 text-slate-600 dark:text-slate-300 text-sm font-medium border border-primary/20">Tubercules</button>
+</div>
+<!-- Product Grid -->
+<main class="flex-1 px-4 pb-24">
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Card 1 -->
+<div class="bg-primary/5 rounded-xl border border-primary/10 overflow-hidden flex flex-col">
+<div class="h-32 bg-cover bg-center" data-alt="Fresh corn cobs on a wooden table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoUHG0fDwHeMkQ0WXyo1EHzsPxMECiU9A7_o0N7d-mmuQEJyOfHytyTo5rSyGZ0YvWQL_1My5elmmVYsHxr7V-p4DrNpaX4bvJjE--L5zigKhJsrofzvoqrMPh6CIVUTmbPhI9EXD646CTyT5jxJDDhjgc7CXe4aGOQuSa4r-ZCy3s6cKsVNBYaph5HD1CiRQvkE8IFSkQ13vW_sVM7npx0Fn2jB7UPTaTpuRO-ztZcsmvlAJORSjajDVA7WKE2LOxC7EinsNOiIM')"></div>
+<div class="p-3 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-semibold text-sm line-clamp-1">Maïs Blanc</h3>
+<div class="flex items-center gap-0.5 text-[10px] text-yellow-500">
+<span class="material-symbols-outlined text-[12px] active-icon">star</span>
+<span>4.8</span>
+</div>
+</div>
+<p class="text-primary font-bold text-sm mb-1">15,000 FCFA</p>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[10px] mb-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Bobo (5km)</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[10px] mb-3">
+<span class="material-symbols-outlined text-[12px]">inventory_2</span>
+<span>Stock: 50 sacs</span>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2 rounded-lg transition-colors mt-auto">Commander</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-primary/5 rounded-xl border border-primary/10 overflow-hidden flex flex-col">
+<div class="h-32 bg-cover bg-center" data-alt="Red fresh tomatoes in a basket" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnJ2HC37rt3ly6O08T_U7SGtretD8a04NIgzKZuBaovi5w63EfJio0-qVl4atlwiN3I89L9k2YRsWkwq9-MsEdeMfp8_sVMgh87DBinIIwbYwZ4l3hp244jf5GhTeX-6Zv61hrIAi_UNHkbLrUKJp3rknA_tm8C277wjFyffmHiaK-GqT-pvS3wY6rUGSj3fHJBeH1KAe-zeaFlfiSMzmff79k1HvMgBERC8HQizgQk0_PXB2WsnadAfyxtVysFKPV3vVRQyBJ9gE')"></div>
+<div class="p-3 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-semibold text-sm line-clamp-1">Tomates Fraîches</h3>
+<div class="flex items-center gap-0.5 text-[10px] text-yellow-500">
+<span class="material-symbols-outlined text-[12px] active-icon">star</span>
+<span>4.5</span>
+</div>
+</div>
+<p class="text-primary font-bold text-sm mb-1">500 FCFA/kg</p>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[10px] mb-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Ouaga (12km)</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[10px] mb-3">
+<span class="material-symbols-outlined text-[12px]">inventory_2</span>
+<span>Stock: 20 kg</span>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2 rounded-lg transition-colors mt-auto">Commander</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-primary/5 rounded-xl border border-primary/10 overflow-hidden flex flex-col">
+<div class="h-32 bg-cover bg-center" data-alt="Heap of purple onions" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhdkY0d931hIltGu_7t9zrW8cwZGHcQwIKDDGmMt0INWXUbwbcqHJV7qwNM1q-zOyvhnp7UmH6crbaRl0TFPvP41ahVESd5fDKps0eB9VTe37eeFgZaDhWuFHT4ms-h2iXUM9kb0p2VnJ7nv2hLQXFkBBqn3heHpbASdl3Zw8XMtwvmBCiOj4eMX8q4FRREE4kI8c3IbC_I6s4BmqOMKjQQBmZrOm4BkKFctskgE0woGq6z2CV_hnQbw-Tkh90DdeWqGZiLVWFTbk')"></div>
+<div class="p-3 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-semibold text-sm line-clamp-1">Oignons Rouges</h3>
+<div class="flex items-center gap-0.5 text-[10px] text-yellow-500">
+<span class="material-symbols-outlined text-[12px] active-icon">star</span>
+<span>4.9</span>
+</div>
+</div>
+<p class="text-primary font-bold text-sm mb-1">8,000 FCFA/sac</p>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[10px] mb-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Koudougou (2km)</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[10px] mb-3">
+<span class="material-symbols-outlined text-[12px]">inventory_2</span>
+<span>Stock: 15 sacs</span>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2 rounded-lg transition-colors mt-auto">Commander</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-primary/5 rounded-xl border border-primary/10 overflow-hidden flex flex-col">
+<div class="h-32 bg-cover bg-center" data-alt="Green beans on a dark surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAs2snwxLi2Og3AczynTMeaH1VtIsywFm67Jo11KCC4acrUVzEWojmUm1TNRp7iZijbIM5IYLKxmF3Yxvc5q38INKD1Ep4oIMOqIgVqjvK8J3weLxxvm0TACyhHTOjlo9Um0cD4iISyIO2bgpliBUM9Yzcl9nCIQAsbbVLd88rUYoO-V-FXovzvidRjrszxc-p1cCOYuszHjLkYcjfsZsT1gyBOFrS3IgMPqd7Nn6LTmyqc2HXQp8Jednd1g-sPRPVmu5X1atlyeCk')"></div>
+<div class="p-3 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-semibold text-sm line-clamp-1">Haricots Verts</h3>
+<div class="flex items-center gap-0.5 text-[10px] text-yellow-500">
+<span class="material-symbols-outlined text-[12px] active-icon">star</span>
+<span>4.2</span>
+</div>
+</div>
+<p class="text-primary font-bold text-sm mb-1">1,200 FCFA/kg</p>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[10px] mb-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+<span>Loumbila (15km)</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[10px] mb-3">
+<span class="material-symbols-outlined text-[12px]">inventory_2</span>
+<span>Stock: 10 kg</span>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2 rounded-lg transition-colors mt-auto">Commander</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-primary/20 px-4 pb-4 pt-2">
+<div class="flex justify-between items-center max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined active-icon">storefront</span>
+<span class="text-[10px] font-medium">Catalogue</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Commandes</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>

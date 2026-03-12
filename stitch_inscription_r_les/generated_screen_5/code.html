@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refuser la commande - AgroConnect BF</title>
+<!-- Load Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#ef4444',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    /* Prevent body scroll when modal is open (simulated) */
+    body {
+      background-color: #111827; /* Dark background for the underlying screen */
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    /* Simulated bottom sheet shadow/positioning */
+    .bottom-sheet-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    /* Material radio input sizing */
+    input[type="radio"] {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  </style>
+</head>
+<body class="text-gray-100">
+<!-- BEGIN: BottomSheetModal -->
+<div class="bottom-sheet-container">
+<!-- Semi-transparent overlay for context -->
+<div class="flex-grow bg-black/40" data-purpose="backdrop-overlay"></div>
+<div class="bg-gray-900 rounded-t-3xl p-6 shadow-2xl border-t border-gray-800" data-purpose="refusal-bottom-sheet">
+<!-- Handle bar for visual indicator -->
+<div class="w-12 h-1.5 bg-gray-700 rounded-full mx-auto mb-6"></div>
+<!-- BEGIN: HeaderSection -->
+<div class="mb-6">
+<h1 class="text-xl font-bold text-white">Refuser la commande #045?</h1>
+<div class="mt-4 p-4 bg-gray-800 rounded-xl border border-gray-700" data-purpose="order-summary">
+<div class="flex items-center gap-3">
+<span class="material-icons text-gray-400">person</span>
+<span class="text-gray-200 font-medium">Fatima Traoré</span>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<span class="material-icons text-gray-400">shopping_basket</span>
+<span class="text-gray-300">Maïs sec — 100 sacs</span>
+</div>
+</div>
+</div>
+<!-- END: HeaderSection -->
+<!-- BEGIN: RefusalForm -->
+<form action="#" class="space-y-6" method="POST">
+<!-- Reason Selection -->
+<div data-purpose="reason-selection">
+<p class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Raison du refus</p>
+<div class="space-y-3">
+<!-- Reason Option 1 -->
+<label class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg cursor-pointer border border-transparent hover:border-gray-600">
+<input class="text-brandRed bg-gray-900 border-gray-700 focus:ring-brandRed" name="reason" type="radio" value="stock"/>
+<span class="text-gray-200">Stock insuffisant</span>
+</label>
+<!-- Reason Option 2 -->
+<label class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg cursor-pointer border border-transparent hover:border-gray-600">
+<input class="text-brandRed bg-gray-900 border-gray-700 focus:ring-brandRed" name="reason" type="radio" value="price"/>
+<span class="text-gray-200">Prix ne convient pas</span>
+</label>
+<!-- Reason Option 3 -->
+<label class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg cursor-pointer border border-transparent hover:border-gray-600">
+<input class="text-brandRed bg-gray-900 border-gray-700 focus:ring-brandRed" name="reason" type="radio" value="date"/>
+<span class="text-gray-200">Indisponible à cette date</span>
+</label>
+<!-- Reason Option 4 -->
+<label class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg cursor-pointer border border-transparent hover:border-gray-600">
+<input class="text-brandRed bg-gray-900 border-gray-700 focus:ring-brandRed" name="reason" type="radio" value="quality"/>
+<span class="text-gray-200">Problème qualité</span>
+</label>
+<!-- Reason Option 5 -->
+<label class="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg cursor-pointer border border-transparent hover:border-gray-600">
+<input class="text-brandRed bg-gray-900 border-gray-700 focus:ring-brandRed" name="reason" type="radio" value="other"/>
+<span class="text-gray-200">Autre</span>
+</label>
+</div>
+</div>
+<!-- Details Area -->
+<div data-purpose="details-container">
+<label class="block text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2" for="details">Détails (Optionnel)</label>
+<textarea class="w-full bg-gray-800 border-gray-700 rounded-xl text-gray-200 focus:border-brandRed focus:ring-brandRed placeholder-gray-500" id="details" placeholder="Ajoutez des précisions ici..." rows="3"></textarea>
+</div>
+<!-- Warning Box -->
+<div class="bg-orange-900/30 border border-orange-800/50 p-4 rounded-xl flex gap-3" data-purpose="notification-warning">
+<span class="material-icons text-orange-500">warning</span>
+<p class="text-sm text-orange-200">L'acheteur sera notifié du refus avec la raison indiquée.</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3 pt-2 pb-4" data-purpose="form-actions">
+<button class="w-full py-4 bg-[#ef4444] hover:bg-red-600 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-colors" type="submit">
+            Confirmer le refus
+          </button>
+<button class="w-full py-4 border border-gray-700 text-gray-300 font-bold rounded-xl hover:bg-gray-800 transition-colors" type="button">
+            Annuler
+          </button>
+</div>
+</form>
+<!-- END: RefusalForm -->
+</div>
+</div>
+<!-- END: BottomSheetModal -->
+</body></html>

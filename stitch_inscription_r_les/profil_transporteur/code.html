@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Top Bar -->
+<header class="flex items-center justify-between p-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10 border-b border-primary/10">
+<h1 class="text-xl font-bold font-display">Mon Profil</h1>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">settings</span>
+</button>
+</header>
+<!-- Profile Area -->
+<main class="flex-1 overflow-y-auto pb-24">
+<section class="flex flex-col items-center py-8 px-4">
+<div class="relative group">
+<div class="w-28 h-28 rounded-full border-4 border-primary bg-cover bg-center" data-alt="Portrait of a professional Burkinabe transporter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkFFhKJAK4PxtrkWVpmdHoP3k26OL9zSuxryKPK2gMb0rzZEHAAlZ5ehjlYzCUwXCnEacOAAQWNIR4OtlDd5FS_4OCd1YNgYKeSSodueNQRivudHjcum8mqK9-IlRY_ChE-MD2Jsd2XRgnPvJQhiXM9LrrHp1tJ-hkscAD6bnu3Bf7DPMwVh6DaYaY6ShqkDh7q2Mw9lwnqhGTA0FiOhaENjZfcRjYYX4romkhx0X6hwB8KGBHu8hreF5UIHLDU9QT1P08MVdy978')">
+</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full border-2 border-background-dark cursor-pointer shadow-lg">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h2 class="text-2xl font-bold">Koné Dramane</h2>
+<span class="inline-block mt-1 px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full border border-primary/30">
+                    Transporteur
+                </span>
+<div class="flex items-center justify-center gap-1 mt-2 text-amber-500">
+<span class="material-symbols-outlined text-base active-tab">star</span>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400">4.2/5 (12 avis)</span>
+</div>
+</div>
+</section>
+<!-- Mon Portefeuille -->
+<section class="px-4 mb-8">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-5 border border-primary/20">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Mon Portefeuille</h3>
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-1">Disponible</p>
+<p class="text-lg font-bold text-primary">25 000 FCFA</p>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-1">En attente</p>
+<p class="text-lg font-bold text-orange-500">37 500 FCFA</p>
+</div>
+</div>
+<a class="inline-flex items-center mt-4 text-sm font-medium text-primary hover:underline" href="#">
+                    Voir mon portefeuille complet
+                    <span class="material-symbols-outlined text-sm ml-1">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Mes Informations -->
+<section class="px-4 mb-8">
+<h3 class="text-lg font-bold mb-4 px-1">Mes informations</h3>
+<div class="space-y-1">
+<div class="flex items-center gap-4 p-4 bg-slate-100 dark:bg-slate-800/40 rounded-xl">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Numéro de téléphone</p>
+<p class="font-medium">+226 70 XX XX XX</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-slate-100 dark:bg-slate-800/40 rounded-xl">
+<span class="material-symbols-outlined text-primary">distance</span>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Zone d'activité</p>
+<p class="font-medium">Ouagadougou et environs</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-slate-100 dark:bg-slate-800/40 rounded-xl">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Véhicule</p>
+<p class="font-medium">Camionnette 2 tonnes</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mes Capacités -->
+<section class="px-4 mb-8">
+<h3 class="text-lg font-bold mb-4 px-1">Mes capacités</h3>
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-800/40 rounded-xl border border-primary/10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">shopping_cart_checkout</span>
+<p class="font-medium">Je peux aussi acheter des produits</p>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom NavBar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-[#1f2d20] border-t border-primary/10 px-4 pb-6 pt-2 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-[#9fbca0] flex-1" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-[#9fbca0] flex-1" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-medium">Missions</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-[#9fbca0] flex-1" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-[10px] font-medium">Livraisons</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-[#9fbca0] flex-1" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary flex-1" href="#">
+<span class="material-symbols-outlined active-tab">person</span>
+<span class="text-[10px] font-bold">Profil</span>
+</a>
+</nav>
+</body></html>

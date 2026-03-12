@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                        "neutral-dark": "#1f2d20",
+                        "neutral-border": "#2c3f2d",
+                        "neutral-text": "#9fbca0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="flex items-center p-4 justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight flex-1 text-center">Profil Visiteur</h2>
+<div class="size-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Visitor Identity Card -->
+<section class="p-6 flex flex-col items-center gap-4 text-center">
+<div class="relative">
+<div class="size-28 rounded-full bg-neutral-dark flex items-center justify-center border-4 border-primary/20">
+<span class="material-symbols-outlined text-6xl text-neutral-text">person_outline</span>
+</div>
+<div class="absolute bottom-1 right-1 size-6 bg-primary rounded-full border-2 border-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-white">no_accounts</span>
+</div>
+</div>
+<div>
+<h1 class="text-2xl font-bold">Bienvenue sur AgroConnect</h1>
+<p class="text-neutral-text mt-1">Connectez-vous pour accéder au marché burkinabè</p>
+</div>
+</section>
+<!-- CTAs -->
+<section class="px-4 py-2 flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">app_registration</span>
+                Créer un compte
+            </button>
+<button class="w-full bg-neutral-dark hover:bg-neutral-border text-white font-bold py-4 rounded-xl border border-neutral-border transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">login</span>
+                Se connecter
+            </button>
+</section>
+<!-- Benefits/Info Card -->
+<section class="p-4 mt-4">
+<div class="bg-neutral-dark rounded-xl overflow-hidden border border-neutral-border shadow-sm">
+<div class="h-32 bg-cover bg-center" data-alt="Champs agricoles fertiles au Burkina Faso" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxXTjNwWOUJ4NJayADtv1XgQxZhE7IgXk_aWkW3IMmcYnaFqgErODVA9Pa5ZkdPc2GTHZ7WqpEFFXWShSCt2fk735oIYo2VZ7KReStVjmvB0wZingoDFlMQcpIbibBFyY2elMMX0DL0lVyT6rg7R6-k7wbFVDQWcKpLdyKom6Kw2m2uwVumCcH28G3awXoRuD-U-mQWS779607RqiKGzmL5NeVRk321tyHdgScJU1ZuDG74A4isBKBxTbIB6OXQxk9XecHdjLA9sI');"></div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-3">Pourquoi nous rejoindre ?</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">storefront</span>
+<p class="text-sm text-neutral-text"><strong class="text-white">Devenez Vendeur :</strong> Proposez vos récoltes directement aux acheteurs.</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<p class="text-sm text-neutral-text"><strong class="text-white">Suivi de Commandes :</strong> Gérez vos achats et livraisons en temps réel.</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">forum</span>
+<p class="text-sm text-neutral-text"><strong class="text-white">Chat Direct :</strong> Échangez avec les agriculteurs et fournisseurs locaux.</p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Settings List (Publicly accessible) -->
+<section class="mt-6">
+<h4 class="px-6 text-xs font-bold text-neutral-text uppercase tracking-widest mb-2">Paramètres &amp; Aide</h4>
+<div class="bg-neutral-dark/40 border-y border-neutral-border">
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-neutral-dark transition-colors border-b border-neutral-border/50" href="#">
+<span class="material-symbols-outlined text-primary">language</span>
+<span class="flex-1 font-medium">Langue</span>
+<span class="text-sm text-neutral-text">Français</span>
+<span class="material-symbols-outlined text-neutral-text text-sm">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-neutral-dark transition-colors border-b border-neutral-border/50" href="#">
+<span class="material-symbols-outlined text-primary">help</span>
+<span class="flex-1 font-medium">Centre d'aide</span>
+<span class="material-symbols-outlined text-neutral-text text-sm">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-neutral-dark transition-colors border-b border-neutral-border/50" href="#">
+<span class="material-symbols-outlined text-primary">gavel</span>
+<span class="flex-1 font-medium">Conditions d'utilisation</span>
+<span class="material-symbols-outlined text-neutral-text text-sm">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-neutral-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">info</span>
+<span class="flex-1 font-medium">À propos d'AgroConnect BF</span>
+<span class="material-symbols-outlined text-neutral-text text-sm">chevron_right</span>
+</a>
+</div>
+</section>
+<footer class="p-8 text-center">
+<p class="text-xs text-neutral-text">Version 2.4.0 • Made for Burkina Faso</p>
+</footer>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full flex gap-1 border-t border-neutral-border bg-neutral-dark px-2 pb-6 pt-2 z-20">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-neutral-text transition-colors" href="#">
+<div class="h-7 flex items-center justify-center">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<p class="text-[10px] font-medium leading-none">Marché</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-neutral-text transition-colors" href="#">
+<div class="h-7 flex items-center justify-center">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<p class="text-[10px] font-medium leading-none">Commandes</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-neutral-text transition-colors" href="#">
+<div class="h-7 flex items-center justify-center">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<p class="text-[10px] font-medium leading-none">Messages</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-white transition-colors" href="#">
+<div class="h-7 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">person</span>
+</div>
+<p class="text-[10px] font-medium leading-none">Profil</p>
+<div class="w-1 h-1 bg-primary rounded-full mt-0.5"></div>
+</a>
+</nav>
+</body></html>

@@ -1,65 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'providers/auth_provider.dart';
-import 'screens/auth/login_screen.dart';
-import 'screens/farmer/farmer_home.dart';
-import 'screens/buyer/buyer_home.dart';
-import 'screens/transporter/transporter_home.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'core/config.dart';
+import 'core/network/dio_client.dart';
+import 'core/router/app_router.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Initialiser les intercepteurs Dio (Injection du JWT)
+  DioClient.init();
+
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => AuthProvider()),
-      ],
-      child: const AgroConnectApp(),
+    const ProviderScope(
+      child: AgroConnectApp(),
     ),
   );
 }
 
-class AgroConnectApp extends StatelessWidget {
+class AgroConnectApp extends ConsumerWidget {
   const AgroConnectApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'AgroConnect BF',
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(routerProvider);
+
+    return MaterialApp.router(
+      title: AppConfig.appName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF16A34A),
-          primary: const Color(0xFF16A34A),
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppConfig.primaryColor),
         useMaterial3: true,
-        fontFamily: 'Inter',
       ),
-      home: const AuthWrapper(),
+      routerConfig: router,
     );
-  }
-}
-
-class AuthWrapper extends StatelessWidget {
-  const AuthWrapper({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final auth = context.watch<AuthProvider>();
-    
-    if (auth.isLoading) {
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
-    }
-
-    if (!auth.isAuthenticated) {
-      return const LoginScreen();
-    }
-
-    switch (auth.userRole) {
-      case 'FARMER':      return const FarmerHome();
-      case 'BUYER':       return const BuyerHome();
-      case 'TRANSPORTER': return const TransporterHome();
-      default:            return const LoginScreen();
-    }
   }
 }

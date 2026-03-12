@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConnect BF - Marché des Missions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-3 flex items-center justify-between">
+<h1 class="text-[#16a34a] text-xl font-bold">AgroConnect BF</h1>
+<div class="relative">
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">notifications</span>
+</button>
+<span class="absolute top-2 right-2 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-red-500 border-2 border-background-dark"></span>
+</span>
+</div>
+</header>
+<!-- Page Title & Counter -->
+<section class="px-4 pt-6 pb-2">
+<div class="flex items-center gap-3">
+<h2 class="text-2xl font-bold tracking-tight">Missions disponibles</h2>
+<span class="bg-primary text-white text-sm font-bold px-2.5 py-0.5 rounded-lg">[3]</span>
+</div>
+</section>
+<!-- Horizontal Scrollable Filters -->
+<div class="flex gap-2 overflow-x-auto px-4 py-3 no-scrollbar">
+<button class="flex items-center gap-1 shrink-0 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">
+            Toutes <span class="material-symbols-outlined text-xs">check</span>
+</button>
+<button class="shrink-0 bg-white dark:bg-transparent border border-slate-300 dark:border-slate-700 px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">
+            &lt; 100 km
+        </button>
+<button class="shrink-0 bg-white dark:bg-transparent border border-slate-300 dark:border-slate-700 px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">
+            100-300 km
+        </button>
+<button class="shrink-0 bg-white dark:bg-transparent border border-slate-300 dark:border-slate-700 px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">
+            &gt; 300 km
+        </button>
+<button class="shrink-0 bg-white dark:bg-transparent border border-slate-300 dark:border-slate-700 px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">
+            Céréales
+        </button>
+<button class="shrink-0 bg-white dark:bg-transparent border border-slate-300 dark:border-slate-700 px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">
+            Légumes
+        </button>
+</div>
+<!-- Missions Feed -->
+<main class="px-4 space-y-6 mt-2">
+<!-- CARD 1 -->
+<article class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl overflow-hidden shadow-lg">
+<div class="p-4 flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg">Commande #045</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">11 mars 2026</p>
+</div>
+<span class="material-symbols-outlined text-primary">more_vert</span>
+</div>
+<!-- Map Component -->
+<div class="w-full h-[220px] relative bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center opacity-70" data-alt="Carte routière entre Bobo-Dioulasso et Ouagadougou" data-location="Burkina Faso" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClovbtVljiUVvIofxhnVmgNdIMpZjeU4h_QleRKyLLBhLL8dQ5wr_MovLplzQTJzXJsRzKWjWOXN6nAgI0XFpWu6lZ2atKqsONdriJjE3CVVWxhf1jmctrgis6GKTG3DxEUl28lwbC5ynb5c9bWiDD6BbJKLqultmGfPRFYFGADvDk5M1oEVbHURcBkyD7bYh25sRLMTvrUatkzeSvyqEvloftXAZzNd5l7mFlb_Quh-2dTsudM0uoL6fwPDA2y-1-p78Fz29U-OE');"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-full h-full p-8 flex flex-col justify-between items-center">
+<div class="flex items-center w-full justify-between">
+<span class="material-symbols-outlined text-green-500 bg-white rounded-full p-1 shadow-lg">location_on</span>
+<div class="h-1 flex-1 mx-2 border-t-4 border-dashed border-primary"></div>
+<span class="material-symbols-outlined text-red-500 bg-white rounded-full p-1 shadow-lg">location_on</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 space-y-4">
+<!-- Info Chips -->
+<div class="flex gap-2">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">straighten</span> 360 km
+                    </span>
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 4h30
+                    </span>
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">agriculture</span> 500 kg
+                    </span>
+</div>
+<!-- Details List -->
+<div class="space-y-3 text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-base">inventory_2</span>
+<p>Maïs sec · 500 kg · 50 sacs</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-base">payments</span>
+<p class="font-semibold">Valeur marchandise : 250 000 FCFA</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500 text-base mt-0.5">trip_origin</span>
+<div>
+<p class="font-medium text-xs text-slate-500 uppercase tracking-wider">Collecte</p>
+<p>Bobo-Dioulasso, Secteur 22 (Amadou K.)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 text-base mt-0.5">location_on</span>
+<div>
+<p class="font-medium text-xs text-slate-500 uppercase tracking-wider">Livraison</p>
+<p>Ouagadougou, Secteur 15 (Fatima T.)</p>
+</div>
+</div>
+</div>
+<div class="bg-amber-500/10 border border-amber-500/20 p-3 rounded-lg flex gap-3">
+<span class="material-symbols-outlined text-amber-500">warning</span>
+<p class="text-xs text-amber-600 dark:text-amber-400 italic">Coordonnées complètes révélées après acceptation de votre offre</p>
+</div>
+<div class="flex items-center gap-2 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-sm">chat</span>
+<span>2 offres déjà soumises</span>
+</div>
+<!-- Buttons -->
+<div class="flex gap-3 pt-2">
+<button class="flex-1 py-3 border border-slate-300 dark:border-slate-700 rounded-xl text-sm font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        Poser une question
+                    </button>
+<button class="flex-1 py-3 bg-primary text-white rounded-xl text-sm font-bold shadow-md shadow-primary/20 hover:bg-primary/90 transition-colors">
+                        Faire une offre
+                    </button>
+</div>
+</div>
+</article>
+<!-- CARD 2 -->
+<article class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl overflow-hidden shadow-lg">
+<div class="p-4 flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg">Commande #048</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">12 mars 2026</p>
+</div>
+</div>
+<div class="w-full h-[180px] bg-slate-200 dark:bg-slate-800 relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-70" data-alt="Carte de Koudougou vers Ouagadougou" data-location="Burkina Faso" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClovbtVljiUVvIofxhnVmgNdIMpZjeU4h_QleRKyLLBhLL8dQ5wr_MovLplzQTJzXJsRzKWjWOXN6nAgI0XFpWu6lZ2atKqsONdriJjE3CVVWxhf1jmctrgis6GKTG3DxEUl28lwbC5ynb5c9bWiDD6BbJKLqultmGfPRFYFGADvDk5M1oEVbHURcBkyD7bYh25sRLMTvrUatkzeSvyqEvloftXAZzNd5l7mFlb_Quh-2dTsudM0uoL6fwPDA2y-1-p78Fz29U-OE');"></div>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex gap-2">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">straighten</span> 100 km
+                    </span>
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 1h15
+                    </span>
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">nutrition</span> 120 kg
+                    </span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-base">inventory_2</span>
+<p>Tomates · 120 kg · 0 offres</p>
+</div>
+<button class="w-full py-3 bg-primary text-white rounded-xl text-sm font-bold shadow-md shadow-primary/20 hover:bg-primary/90 transition-colors">
+                    Faire une offre
+                </button>
+</div>
+</article>
+<!-- CARD 3 -->
+<article class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl overflow-hidden opacity-60">
+<div class="p-4 flex justify-between items-center">
+<div>
+<h3 class="font-bold text-lg">Commande #039</h3>
+<p class="text-xs text-slate-500">Banfora vers Bobo</p>
+</div>
+<span class="bg-slate-200 dark:bg-slate-800 text-slate-500 text-xs font-bold px-3 py-1 rounded-full">Mission attribuée</span>
+</div>
+<div class="w-full h-[140px] bg-slate-200 dark:bg-slate-800 relative grayscale">
+<div class="absolute inset-0 bg-cover bg-center opacity-40" data-alt="Carte grise de Banfora vers Bobo-Dioulasso" data-location="Burkina Faso" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClovbtVljiUVvIofxhnVmgNdIMpZjeU4h_QleRKyLLBhLL8dQ5wr_MovLplzQTJzXJsRzKWjWOXN6nAgI0XFpWu6lZ2atKqsONdriJjE3CVVWxhf1jmctrgis6GKTG3DxEUl28lwbC5ynb5c9bWiDD6BbJKLqultmGfPRFYFGADvDk5M1oEVbHURcBkyD7bYh25sRLMTvrUatkzeSvyqEvloftXAZzNd5l7mFlb_Quh-2dTsudM0uoL6fwPDA2y-1-p78Fz29U-OE');"></div>
+</div>
+<div class="p-4">
+<div class="flex gap-3">
+<button class="flex-1 py-3 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-bold text-slate-400 cursor-not-allowed" disabled="">
+                        Détails
+                    </button>
+<button class="flex-1 py-3 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-bold text-slate-400 cursor-not-allowed" disabled="">
+                        Fermée
+                    </button>
+</div>
+</div>
+</article>
+</main>
+<!-- Bottom Navbar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-2 py-2 flex justify-around items-center z-50">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined font-fill">assignment</span>
+<span class="text-[10px] font-bold">Missions</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-[10px] font-medium">Livraisons</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors relative" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-medium">Messages</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .material-symbols-outlined.font-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</body></html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>AgroConnect BF - Confirmer la commande</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+<div class="relative flex min-h-screen w-full flex-col justify-end bg-black/60">
+<!-- Bottom Sheet Container -->
+<div class="flex flex-col w-full max-h-[95vh] bg-background-light dark:bg-background-dark rounded-t-xl overflow-hidden shadow-2xl">
+<!-- BottomSheetHandle -->
+<div class="flex flex-col items-center pt-3 pb-2 cursor-grab active:cursor-grabbing">
+<div class="h-1.5 w-12 rounded-full bg-primary/30 dark:bg-primary/20"></div>
+</div>
+<!-- Header -->
+<div class="px-6 py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+<h2 class="text-xl font-bold tracking-tight">Confirmer la commande</h2>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-6 pb-8">
+<!-- Produit Récap -->
+<div class="mb-6 p-4 rounded-xl bg-primary/5 dark:bg-primary/10 border border-primary/10 flex gap-4">
+<div class="h-20 w-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Sac de grains de maïs séchés" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyHzdVd28ZwAIBWNCn0TAZ6RhMbZq00bHZiaBwNM9v34cQbfYfqkLUy8NqqkHaGEl5kkv48EfJd9IHRCYDdtou8yu42Y1bBWtPRf0m8aU7KYoTbGfz73lA6qMJIndeJLfcHz4x7k2VN6nvQk2qxrWpaYmRsbnd5ZHOJdMGV1lE92S8_0UaErsrb7ha5KEtmv7lZx-Jy7sdCHuXbJKoEgRD7Xl5gX_eFvUXqTp_gXaQK2PMzvKEOxrAH1e6nNP9N0y5e2qpAI7lyLQ')"></div>
+<div class="flex flex-col justify-center">
+<p class="text-xs font-medium uppercase tracking-wider text-primary/70 mb-1">Vendeur : Amadou Kaboré</p>
+<h3 class="text-lg font-bold leading-tight">Maïs sec</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">10 sacs · 50 kg par sac</p>
+</div>
+</div>
+<!-- Quantité Selector -->
+<div class="flex items-center justify-between mb-8 p-4 bg-slate-100 dark:bg-white/5 rounded-xl">
+<span class="font-medium text-sm uppercase tracking-wide opacity-80">Quantité</span>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-primary/20 border border-slate-200 dark:border-primary/30 text-primary">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<div class="flex flex-col items-center min-w-[60px]">
+<span class="text-xl font-bold">10</span>
+<span class="text-[10px] uppercase font-bold text-primary">Sacs</span>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Livraison Section -->
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<h3 class="font-bold">Adresse de livraison</h3>
+</div>
+<div class="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Carte satellite de Ouagadougou avec marqueur" data-location="Ouagadougou" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfQqxBpLMb9UskPAPicYUqnToVdYy2M_Es-WKPtr1o1t9wdPOzzUrHkHwi7AUQmuSGpsDt0AL7aQFoKEJIeQsIzzvBehHjr7CeOCzJO5SlxPjhChSclYOpBXVk2qFOa0Hu6iJRfefNqpRYZjvs6WdNi0OdJyfwcDLJ0wV1bEhJJcv15UQ_RsxmEyD29kiERfRJCWXRycVaJS_N1oPmEIaoXOl_cu_5VJ90tnbwTrv8VFVW2CRk2x2jIz334zzUnN1_dWG9d-kNtSg')"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-red-500 text-5xl drop-shadow-lg fill-1">location_on</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm p-3 rounded-lg shadow-lg border border-primary/20">
+<p class="text-sm font-medium">Ouagadougou, Secteur 15, Marché de Gounghin</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider opacity-60 ml-1">Budget livraison (FCFA)</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-lg">payments</span>
+<input class="w-full bg-slate-100 dark:bg-white/5 border-none rounded-lg pl-10 text-sm font-semibold focus:ring-2 focus:ring-primary" type="number" value="15000"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider opacity-60 ml-1">Note pour le vendeur</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-lg">edit_note</span>
+<input class="w-full bg-slate-100 dark:bg-white/5 border-none rounded-lg pl-10 text-sm focus:ring-2 focus:ring-primary" type="text" value="Besoin urgent pour lundi matin."/>
+</div>
+</div>
+</div>
+</div>
+<!-- Récapitulatif Financier -->
+<div class="bg-primary/5 dark:bg-white/5 rounded-xl p-5 space-y-3 mb-8">
+<div class="flex justify-between text-sm">
+<span class="opacity-70">Produits (10 sacs)</span>
+<span class="font-medium">50 000 FCFA</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="opacity-70">Frais de livraison</span>
+<span class="font-medium">15 000 FCFA</span>
+</div>
+<div class="pt-3 border-t border-slate-200 dark:border-white/10 flex justify-between items-end">
+<span class="font-bold">Total estimé</span>
+<span class="text-2xl font-bold text-primary">65 000 FCFA</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-4">
+<button class="h-14 rounded-xl font-bold border-2 border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
+                        Annuler
+                    </button>
+<button class="h-14 rounded-xl font-bold bg-primary text-white shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">check_circle</span>
+                        Passer la commande
+                    </button>
+</div>
+</div>
+<!-- Safe area bottom spacer -->
+<div class="h-6 w-full"></div>
+</div>
+</div>
+</body></html>

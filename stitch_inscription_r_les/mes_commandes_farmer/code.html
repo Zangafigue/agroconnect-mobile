@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab-indicator {
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: #16a34a;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-primary/20 px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">potted_plant</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100">AgroConnect BF</h1>
+</div>
+<button class="relative p-2 rounded-full hover:bg-slate-100 dark:hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</button>
+</header>
+<!-- Navigation Tabs -->
+<nav class="bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-primary/20 overflow-x-auto no-scrollbar">
+<div class="flex px-4 min-w-max">
+<a class="relative px-4 py-4 text-sm font-bold text-primary" href="#">
+                En attente (3)
+                <div class="active-tab-indicator rounded-t-full"></div>
+</a>
+<a class="px-4 py-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+                Confirmées (2)
+            </a>
+<a class="px-4 py-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+                En livraison (1)
+            </a>
+<a class="px-4 py-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+                Historique
+            </a>
+</div>
+</nav>
+<!-- Content Area -->
+<main class="flex-1 p-4 space-y-4 max-w-2xl mx-auto w-full">
+<!-- Pending Order Card 1 -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl overflow-hidden shadow-sm">
+<div class="p-4 border-b border-slate-100 dark:border-primary/10 flex justify-between items-center">
+<div class="space-y-1">
+<span class="text-[10px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Commande #045</span>
+<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100">Fatima Traoré</h2>
+</div>
+<button class="p-1.5 mr-2 rounded-full text-slate-500 hover:text-primary hover:bg-primary/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+</button><span class="px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-wider flex items-center">
+                    En attente
+                </span>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-slate-100 dark:bg-primary/20 border border-slate-200 dark:border-primary/10">
+<img class="w-full h-full object-cover" data-alt="Gros plan sur des grains de maïs séchés de haute qualité" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUTv9m_BHXCsOwWAIoIb4KEln6fEZwZFZs2kBMpNQjn4x7CnwWMa7W1JR4UA-a_1_s-_yB2PuX-edDDyFljIF1QYhib6vHN7817QMexxtNYppZvcU1zLl5gbaP4sB1yp5YcDZDFv3RWpDRDsym3b-JoI1c3NiSh6w92FzyuQV7PjdLfWloTWBekAJo7R79Ohx3AJgW0fpgQMNka4YgDwDqN5-1a5ESrrkIcNaTZJ13lrzftVO5_GeppUOLLJzjL7VGnbMsBPgz_p4"/>
+</div>
+<div class="flex-1 space-y-1">
+<p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Maïs sec local</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">100 sacs • 500kg total</p>
+<p class="text-lg font-bold text-primary">500,000 FCFA</p>
+</div>
+</div>
+<div class="space-y-3 bg-slate-50 dark:bg-primary/10 p-3 rounded-lg">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-lg">location_on</span>
+<p class="text-xs text-slate-600 dark:text-slate-300">Ouagadougou, Secteur 15, Rue de l'Espoir</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-lg">chat_bubble</span>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Note de l'acheteur</p>
+<p class="text-sm italic text-slate-700 dark:text-slate-200">"Besoin urgent pour la transformation hebdomadaire. Merci d'avance."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50/50 dark:bg-primary/5 flex gap-3">
+<button class="flex-1 py-3 px-4 rounded-lg border border-slate-300 dark:border-primary/30 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:bg-slate-100 dark:hover:bg-primary/10 transition-colors">
+                    Refuser
+                </button>
+<button class="flex-[2] py-3 px-4 rounded-lg bg-primary text-white font-bold text-sm hover:brightness-110 shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                    Confirmer la commande
+                </button>
+</div>
+</div>
+<!-- Another Card Placeholder for Context -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 rounded-xl overflow-hidden shadow-sm opacity-80">
+<div class="p-4 border-b border-slate-100 dark:border-primary/10 flex justify-between items-center">
+<div class="space-y-1">
+<span class="text-[10px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Commande #044</span>
+<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100">Moussa Diallo</h2>
+</div>
+<button class="p-1.5 mr-2 rounded-full text-slate-500 hover:text-primary hover:bg-primary/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+</button><span class="px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-wider flex items-center">
+                    En attente
+                </span>
+</div>
+<div class="p-4">
+<p class="text-sm text-slate-600 dark:text-slate-400 italic">Détails de commande supplémentaires...</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="sticky bottom-0 z-50 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-primary/20 px-2 pb-6 pt-2">
+<div class="flex justify-between items-center max-w-lg mx-auto">
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-400 dark:text-slate-500 py-1" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-400 dark:text-slate-500 py-1" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-medium">Produits</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-primary py-1" href="#">
+<div class="bg-primary/10 p-1.5 rounded-full mb-px">
+<span class="material-symbols-outlined fill-[1]">assignment</span>
+</div>
+<span class="text-[10px] font-bold">Commandes</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-400 dark:text-slate-500 py-1" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-400 dark:text-slate-500 py-1" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</footer>
+</body></html>

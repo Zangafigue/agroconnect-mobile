@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>AgroConnect BF - Retrait de fonds</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Backdrop Container -->
+<div class="fixed inset-0 bg-background-dark/80 backdrop-blur-sm z-50 flex flex-col justify-end">
+<!-- Bottom Sheet -->
+<div class="bg-background-light dark:bg-background-dark w-full max-w-2xl mx-auto rounded-t-xl shadow-2xl flex flex-col border-t border-primary/20">
+<!-- Handle -->
+<div class="flex h-6 w-full items-center justify-center">
+<div class="h-1.5 w-12 rounded-full bg-primary/30"></div>
+</div>
+<!-- Header -->
+<div class="px-6 py-4 flex items-center justify-between border-b border-primary/10">
+<h2 class="text-xl font-bold text-slate-900 dark:text-slate-100">Retirer mes fonds</h2>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Content -->
+<div class="px-6 py-6 overflow-y-auto max-h-[80vh]">
+<!-- Balance Info -->
+<div class="mb-6">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Solde disponible</p>
+<p class="text-3xl font-bold text-primary">25 000 FCFA</p>
+</div>
+<!-- Amount Input -->
+<div class="space-y-4 mb-8">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Montant du retrait</label>
+<div class="relative">
+<input class="w-full h-14 bg-primary/5 border border-primary/20 rounded-lg px-4 text-lg font-bold focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" type="text" value="25 000"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 font-bold text-slate-500 dark:text-slate-400">
+                                FCFA
+                            </div>
+</div>
+<button class="text-sm font-medium text-primary hover:underline text-left w-fit mt-1">
+                            Tout retirer (25 000 FCFA)
+                        </button>
+</div>
+</div>
+<!-- Payment Method -->
+<div class="space-y-4 mb-8">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Mode de paiement</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<!-- Orange Money (Selected) -->
+<div class="cursor-pointer border-2 border-primary bg-primary/10 rounded-lg p-4 flex flex-col items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-primary scale-125">account_balance_wallet</span>
+<span class="text-xs font-bold text-center">Orange Money</span>
+</div>
+<!-- Moov Money -->
+<div class="cursor-pointer border-2 border-primary/10 hover:border-primary/30 bg-primary/5 rounded-lg p-4 flex flex-col items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">smartphone</span>
+<span class="text-xs font-medium text-center text-slate-600 dark:text-slate-400">Moov Money</span>
+</div>
+<!-- Banque -->
+<div class="cursor-pointer border-2 border-primary/10 hover:border-primary/30 bg-primary/5 rounded-lg p-4 flex flex-col items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">account_balance</span>
+<span class="text-xs font-medium text-center text-slate-600 dark:text-slate-400">Banque</span>
+</div>
+</div>
+</div>
+<!-- Phone Number -->
+<div class="space-y-4 mb-8">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Numéro de téléphone Orange Money</label>
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center bg-primary/5 border border-primary/20 rounded-lg px-3 h-14">
+<img alt="Burkina Faso Flag" class="w-6 h-4 rounded-sm" data-alt="Drapeau du Burkina Faso" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuiLxAOYCyVX6aJvTH4HOmwdup5yIlR8ig_BP4cqlb8X41u9-YnsXjYetRle_JqyO0wtLaELs3JbbAHIrAX60LGS9f3rrBnimDb_TRuzgMDwPjOB4saSQhrlhftp9DDB8thECoeriexdFjB70IDLKcGXKoY8qPJKMaIwM0iLbdfFYhIjh2kUq_qQz5mABNdvVOOlgC_6ySQt-KCrblpAhRxMAeUB7leKIt7Fo8j6DiMKiXs-RdZ9bEVNM5W63z8PndP6kcUGaFzpA"/>
+</div>
+<input class="flex-1 h-14 bg-primary/5 border border-primary/20 rounded-lg px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100 placeholder:text-slate-500/50" placeholder="+226 7X XX XX XX" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Info Box -->
+<div class="flex items-start gap-3 p-4 bg-primary/5 border border-primary/20 rounded-xl mb-8">
+<span class="material-symbols-outlined text-primary">info</span>
+<p class="text-sm text-slate-600 dark:text-slate-300">
+<span class="font-bold">Simulation :</span> le virement sera effectué sous 24h ouvrées vers votre compte Orange Money.
+                    </p>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex-1 h-14 border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+                        Annuler
+                    </button>
+<button class="flex-1 h-14 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-shadow shadow-lg shadow-primary/20">
+                        Confirmer le retrait
+                    </button>
+</div>
+</div>
+<!-- Footer Spacing -->
+<div class="h-8"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConnect BF - Paiement</title>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'agro-dark': '#0a0c10',
+            'agro-surface': '#161b22',
+            'agro-orange': '#FF6600',
+            'agro-blue': '#005CB9',
+            'agro-green': '#16a34a',
+            'agro-border': '#30363d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-agro-dark text-gray-100 font-sans min-h-screen flex flex-col">
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-agro-dark border-b border-agro-border p-4 flex items-center">
+<button class="mr-4 hover:bg-white/10 p-1 rounded-full transition-colors" data-purpose="back-button">
+<span class="material-icons block">arrow_back</span>
+</button>
+<h1 class="text-xl font-semibold">Paiement</h1>
+</header>
+<!-- END: MainHeader -->
+<main class="p-4 space-y-6 flex-grow pb-24">
+<!-- BEGIN: OrderSummary -->
+<section class="bg-agro-surface rounded-xl p-4 border border-agro-border" data-purpose="order-summary">
+<h2 class="text-gray-400 text-xs font-bold mb-4 tracking-wider uppercase">Récapitulatif commande #043</h2>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-400">Produits</span>
+<span class="font-medium">70 000 FCFA</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-400">Livraison</span>
+<span class="font-medium">15 000 FCFA</span>
+</div>
+<div class="pt-3 border-t border-agro-border flex justify-between items-center">
+<span class="text-lg font-bold">TOTAL</span>
+<span class="text-lg font-bold text-agro-green">85 000 FCFA</span>
+</div>
+</div>
+</section>
+<!-- END: OrderSummary -->
+<!-- BEGIN: PaymentMethods -->
+<section data-purpose="payment-methods-selection">
+<h2 class="text-gray-400 text-xs font-bold mb-4 tracking-wider uppercase">Choisir un mode de paiement</h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Orange Money (Selected) -->
+<div class="bg-agro-surface border-2 border-agro-green rounded-xl p-4 flex flex-col items-center justify-center cursor-pointer transition-transform active:scale-95" data-purpose="payment-card">
+<div class="bg-agro-orange w-10 h-10 rounded-lg flex items-center justify-center mb-3">
+<span class="font-bold text-white text-[10px]">OM</span>
+</div>
+<span class="text-xs font-medium">Orange Money</span>
+</div>
+<!-- Moov Money -->
+<div class="bg-agro-surface border border-agro-border rounded-xl p-4 flex flex-col items-center justify-center cursor-pointer opacity-60 hover:opacity-100 transition-all" data-purpose="payment-card">
+<div class="bg-agro-blue w-10 h-10 rounded-lg flex items-center justify-center mb-3">
+<span class="font-bold text-white text-[10px]">Moov</span>
+</div>
+<span class="text-xs font-medium">Moov Money</span>
+</div>
+<!-- Card Payment -->
+<div class="bg-agro-surface border border-agro-border rounded-xl p-4 flex flex-col items-center justify-center cursor-pointer opacity-60 hover:opacity-100 transition-all" data-purpose="payment-card">
+<div class="bg-gray-700 w-10 h-10 rounded-lg flex items-center justify-center mb-3">
+<span class="material-icons text-white text-xl">credit_card</span>
+</div>
+<span class="text-xs font-medium">Carte Bancaire</span>
+</div>
+<!-- Wire Transfer -->
+<div class="bg-agro-surface border border-agro-border rounded-xl p-4 flex flex-col items-center justify-center cursor-pointer opacity-60 hover:opacity-100 transition-all" data-purpose="payment-card">
+<div class="bg-gray-700 w-10 h-10 rounded-lg flex items-center justify-center mb-3">
+<span class="material-icons text-white text-xl">account_balance</span>
+</div>
+<span class="text-xs font-medium">Virement</span>
+</div>
+</div>
+</section>
+<!-- END: PaymentMethods -->
+<!-- BEGIN: MobileMoneyInput -->
+<section class="space-y-4" data-purpose="form-inputs">
+<div class="flex flex-col space-y-2">
+<label class="text-sm text-gray-400" for="phone-number">Numéro de téléphone Orange Money</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm font-medium border-r border-agro-border pr-3">+226</span>
+<input class="w-full bg-agro-surface border border-agro-border rounded-xl py-4 pl-16 pr-4 focus:ring-1 focus:ring-agro-green focus:border-agro-green text-white placeholder-gray-600 transition-all" id="phone-number" placeholder="XX XX XX XX" type="tel"/>
+</div>
+</div>
+</section>
+<!-- END: MobileMoneyInput -->
+<!-- BEGIN: SecurityNotice -->
+<section class="bg-agro-green/5 border border-agro-green/20 rounded-xl p-4 flex items-start space-x-3" data-purpose="security-info">
+<span class="material-icons text-agro-green text-xl">verified_user</span>
+<p class="text-[13px] leading-snug text-gray-400">
+        Vos fonds sont sécurisés jusqu'à la livraison. Le vendeur ne sera payé qu'une fois votre réception confirmée.
+      </p>
+</section>
+<!-- END: SecurityNotice -->
+<!-- BEGIN: ActionButton -->
+<div class="pt-4">
+<button class="w-full bg-agro-green hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex items-center justify-center space-x-2">
+<span class="material-icons text-xl">lock</span>
+<span>PAYER 85 000 FCFA</span>
+</button>
+<p class="text-center text-[10px] text-gray-500 mt-6 uppercase tracking-widest font-medium opacity-50">Paiement sécurisé par AgroConnect</p>
+</div>
+<!-- END: ActionButton -->
+</main>
+<!-- BEGIN: BottomNav -->
+<nav class="fixed bottom-0 left-0 right-0 bg-agro-dark border-t border-agro-border flex justify-around items-center py-2 px-1 z-50 shadow-2xl">
+<a class="flex flex-col items-center justify-center flex-1 text-gray-500 hover:text-gray-300 transition-colors" href="#">
+<span class="material-icons">home</span>
+<span class="text-[10px] mt-1 font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-gray-500 hover:text-gray-300 transition-colors" href="#">
+<span class="material-icons">grid_view</span>
+<span class="text-[10px] mt-1 font-medium">Catalogue</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-agro-green" href="#">
+<span class="material-icons">shopping_bag</span>
+<span class="text-[10px] mt-1 font-medium">Commandes</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-gray-500 hover:text-gray-300 transition-colors" href="#">
+<span class="material-icons">chat_bubble_outline</span>
+<span class="text-[10px] mt-1 font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-gray-500 hover:text-gray-300 transition-colors" href="#">
+<span class="material-icons">person_outline</span>
+<span class="text-[10px] mt-1 font-medium">Profil</span>
+</a>
+</nav>
+<!-- END: BottomNav -->
+<style data-purpose="custom-styling">
+    /* Remove default focus outlines */
+    input:focus {
+      outline: none;
+    }
+    
+    /* Smooth transition for payment cards */
+    [data-purpose="payment-card"] {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Ensure body doesn't bounce on mobile scrolling */
+    body {
+      overscroll-behavior-y: none;
+    }
+  </style>
+</body></html>

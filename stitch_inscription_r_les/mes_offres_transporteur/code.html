@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0f1710",
+                        "card-dark": "#1a241b",
+                        "border-dark": "#2d3a2e",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            border-bottom: 3px solid #16a34a;
+            color: #16a34a;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Header -->
+<header class="sticky top-0 z-20 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-border-dark px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h1 class="text-xl font-bold tracking-tight">Mes offres</h1>
+</div>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">history</span>
+</button>
+</header>
+<!-- Tabs System -->
+<div class="sticky top-[61px] z-10 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-border-dark">
+<nav class="flex px-4 overflow-x-auto no-scrollbar">
+<a class="flex-1 min-w-fit text-center py-4 text-sm font-semibold active-tab transition-colors" href="#">
+                En attente (2)
+            </a>
+<a class="flex-1 min-w-fit text-center py-4 text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-primary transition-colors border-b-3 border-transparent" href="#">
+                Acceptées (1)
+            </a>
+<a class="flex-1 min-w-fit text-center py-4 text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-primary transition-colors border-b-3 border-transparent" href="#">
+                Refusées (3)
+            </a>
+</nav>
+</div>
+<!-- Main Content -->
+<main class="flex-1 p-4 pb-24 space-y-4">
+<!-- Offer Card 1 -->
+<div class="bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden shadow-sm">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-orange-500 dark:text-orange-400 uppercase tracking-wider mb-1">En attente</span>
+<h3 class="text-lg font-bold">Offre #045</h3>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">
+                        15 000 FCFA
+                    </div>
+</div>
+<div class="space-y-3 mb-4">
+<div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+<p class="text-sm">Bobo-Dioulasso <span class="mx-1">→</span> Ouagadougou</p>
+</div>
+<div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">distance</span>
+<p class="text-sm">360 km</p>
+</div>
+<div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">inventory_2</span>
+<p class="text-sm">Maïs sec • 500 kg</p>
+</div>
+</div>
+<div class="flex gap-3 pt-4 border-t border-slate-100 dark:border-border-dark">
+<button class="flex-1 bg-primary text-white font-bold py-2.5 rounded-lg text-sm hover:bg-primary/90 transition-colors">
+                        Modifier
+                    </button>
+<button class="flex-1 border border-slate-200 dark:border-border-dark text-slate-700 dark:text-slate-300 font-bold py-2.5 rounded-lg text-sm hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        Retirer
+                    </button>
+</div>
+</div>
+</div>
+<!-- Offer Card 2 -->
+<div class="bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden shadow-sm">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-orange-500 dark:text-orange-400 uppercase tracking-wider mb-1">En attente</span>
+<h3 class="text-lg font-bold">Offre #048</h3>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">
+                        5 500 FCFA
+                    </div>
+</div>
+<div class="space-y-3 mb-4">
+<div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+<p class="text-sm">Koudougou <span class="mx-1">→</span> Ouagadougou</p>
+</div>
+<div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">distance</span>
+<p class="text-sm">100 km</p>
+</div>
+<div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">inventory_2</span>
+<p class="text-sm">Sorgho • 200 kg</p>
+</div>
+</div>
+<div class="flex gap-3 pt-4 border-t border-slate-100 dark:border-border-dark">
+<button class="flex-1 bg-primary text-white font-bold py-2.5 rounded-lg text-sm hover:bg-primary/90 transition-colors">
+                        Modifier
+                    </button>
+<button class="flex-1 border border-slate-200 dark:border-border-dark text-slate-700 dark:text-slate-300 font-bold py-2.5 rounded-lg text-sm hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        Retirer
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-card-dark border-t border-slate-200 dark:border-border-dark px-2 pb-safe">
+<div class="flex justify-between items-center h-16 max-w-md mx-auto">
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] fill-[1]">assignment</span>
+<span class="text-[10px] font-bold">Missions</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[24px]">local_offer</span>
+<span class="text-[10px] font-medium">Annonces</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>

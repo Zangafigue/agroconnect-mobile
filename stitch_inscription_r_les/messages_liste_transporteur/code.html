@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl overflow-x-hidden border-x border-slate-200 dark:border-slate-800">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<h2 class="text-primary text-lg font-bold leading-tight tracking-tight flex-1">AgroConnect BF</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-primary/10 text-slate-700 dark:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Title Section -->
+<div class="px-4 pt-4 pb-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">Messages</h1>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col w-full h-12">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full bg-slate-100 dark:bg-primary/10 border border-slate-200 dark:border-primary/20">
+<div class="text-slate-400 dark:text-primary/60 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-primary/40 px-3 text-base font-normal leading-normal" placeholder="Rechercher une conversation..." value=""/>
+</div>
+</label>
+</div>
+<!-- Conversation List -->
+<div class="flex-1 overflow-y-auto pb-20">
+<!-- Item 1: Farmer -->
+<a class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-primary/5 transition-colors border-b border-slate-100 dark:border-primary/10" href="#">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 border-2 border-primary/20" data-alt="Portrait of a smiling West African farmer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5ZCZCiHdOaJVAuusneFJNZTfMYFEOwEs8HpcFYmSDNlQxtY2AgmBTN66UI1GYpyQljXXYbAr4bu3w85U9RHt4yEA0q0D_CcAk1GUwFDt8WSfqPlLZF4N9khsYzl4bf4bBXFWJTK8mZZDPssaAR1M6xVcIhVE7tS_OPiqiUVC9o5goKKgdS0fC59pY3aClrdeuVMESaJiio5i9ZNL1oYEsry2ZqzhPhzEHlNQDhHjlQplNKd0HbM-tp2Z6DrKt_oNKaVk21nboVPw");'></div>
+<div class="absolute bottom-0 right-0 h-4 w-4 bg-primary border-2 border-background-dark rounded-full"></div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold truncate">Amadou K.</p>
+<p class="text-primary text-xs font-medium">10:30</p>
+</div>
+<div class="flex justify-between items-center gap-2">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium line-clamp-1 flex-1">Je serai au point de collecte à 8h.</p>
+<div class="bg-primary text-white text-[10px] font-bold h-5 min-w-[20px] px-1 rounded-full flex items-center justify-center">1</div>
+</div>
+</div>
+</a>
+<!-- Item 2: Buyer -->
+<a class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-primary/5 transition-colors border-b border-slate-100 dark:border-primary/10" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 border-2 border-slate-200 dark:border-slate-800" data-alt="Portrait of a professional Burkinabé businesswoman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTekO4MkDHKYX3VkAUYZgF5T-ZLkEAGNadHrpvOLA1yWFl2WsFfp6rJxmo5mqPIJJIditO6_IAaTx6Y0j7uwzAZg1yo1IIjUp_W6a_KEt9_yFB78lVKcPj9cnZQOOlaPpQz9cuPUtoM5LwPrNezPJ28KAFr4QHd9g_N6CrUUHSDgH4dEF1fRFCa7LkEd9gealLz8HNMmVbbJWFZUXRLBseNIX5isabt-KVaBHgFZuZGNR3xgMmfACE5Kzl2NOyJmqvbgOLKl9iC8o");'></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold truncate">Fatima T.</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Hier</p>
+</div>
+<div class="flex justify-between items-center gap-2">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal line-clamp-1 flex-1">Pouvez-vous confirmer l'arrivée ?</p>
+<span class="material-symbols-outlined text-primary text-lg">done_all</span>
+</div>
+</div>
+</a>
+<!-- Item 3: Admin -->
+<a class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-primary/5 transition-colors border-b border-slate-100 dark:border-primary/10" href="#">
+<div class="flex items-center justify-center aspect-square rounded-full h-14 w-14 bg-primary/20 text-primary border-2 border-primary/30">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold truncate">Support AgroConnect</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">09 Mars</p>
+</div>
+<div class="flex justify-between items-center gap-2">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal line-clamp-1 flex-1">Votre litige #042 a été résolu.</p>
+<span class="material-symbols-outlined text-slate-400 text-lg">check</span>
+</div>
+</div>
+</a>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full max-w-md bg-white dark:bg-background-dark border-t border-slate-200 dark:border-primary/20 px-2 pb-6 pt-2 flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium">Accueil</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">task_alt</span>
+<p class="text-[10px] font-medium">Missions</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<p class="text-[10px] font-medium">Livraisons</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill">chat_bubble</span>
+<p class="text-[10px] font-bold">Messages</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium">Profil</p>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmation de réinitialisation - AgroConnect BF</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<!-- BEGIN: Custom Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'agro-dark': '#0a140a',
+            'agro-card': '#152015',
+            'agro-green': '#16a34a',
+            'agro-gray': '#9ca3af',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+<!-- END: Custom Tailwind Configuration -->
+<style data-purpose="layout-optimizations">
+    /* Ensuring the mobile view fills the screen and matches the dark theme */
+    body {
+      background-color: #0a140a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 1.5rem;
+    }
+    /* Simple fade-in animation for the success state */
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-white">
+<!-- BEGIN: Confirmation Card Container -->
+<main class="w-full max-w-md fade-in" data-purpose="auth-confirmation-container">
+<div class="bg-agro-card rounded-3xl p-8 shadow-2xl border border-white/5 flex flex-col items-center text-center" data-purpose="confirmation-card">
+<!-- BEGIN: Success Icon Section -->
+<div class="mb-8" data-purpose="status-icon">
+<div class="w-24 h-24 bg-agro-green/10 rounded-full flex items-center justify-center">
+<span class="material-icons text-agro-green" style="font-size: 64px;">
+            check_circle
+          </span>
+</div>
+</div>
+<!-- END: Success Icon Section -->
+<!-- BEGIN: Text Content Section -->
+<div class="space-y-3 mb-10" data-purpose="content-messages">
+<h1 class="text-2xl font-bold text-white tracking-tight">
+          Mot de passe réinitialisé !
+        </h1>
+<p class="text-agro-gray text-base leading-relaxed">
+          Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.
+        </p>
+</div>
+<!-- END: Text Content Section -->
+<!-- BEGIN: Action Button Section -->
+<div class="w-full" data-purpose="navigation-actions">
+<a class="block w-full bg-agro-green hover:bg-green-700 active:scale-[0.98] transition-all py-4 rounded-xl text-white font-bold text-lg focus:outline-none focus:ring-2 focus:ring-agro-green focus:ring-offset-2 focus:ring-offset-agro-card" href="/login" role="button">
+          Se connecter
+        </a>
+</div>
+<!-- END: Action Button Section -->
+</div>
+</main>
+<!-- END: Confirmation Card Container -->
+</body></html>

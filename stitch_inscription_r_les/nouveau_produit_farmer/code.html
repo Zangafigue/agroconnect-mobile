@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConnect BF - Nouveau Produit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen pb-24">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Nouveau produit</h1>
+</div>
+<button class="text-primary font-bold px-3 py-1 hover:bg-primary/10 rounded-lg transition-colors">
+            Publier
+        </button>
+</header>
+<main class="max-w-md mx-auto p-4 space-y-8">
+<!-- Section: Photos -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-primary">Photos du produit</h3>
+<span class="text-xs text-slate-500 dark:text-slate-400">4 maximum</span>
+</div>
+<div class="grid grid-cols-4 gap-3">
+<div class="col-span-4 aspect-video rounded-xl border-2 border-dashed border-primary/30 bg-primary/5 flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-primary/10 transition-colors overflow-hidden relative">
+<span class="material-symbols-outlined text-4xl text-primary/40">add_a_photo</span>
+<p class="text-sm font-medium text-slate-400">Ajouter la photo principale</p>
+</div>
+<div class="aspect-square rounded-lg border-2 border-dashed border-primary/20 bg-primary/5 flex items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined text-primary/30">add</span>
+</div>
+<div class="aspect-square rounded-lg border-2 border-dashed border-primary/20 bg-primary/5 flex items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined text-primary/30">add</span>
+</div>
+<div class="aspect-square rounded-lg border-2 border-dashed border-primary/20 bg-primary/5 flex items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined text-primary/30">add</span>
+</div>
+</div>
+</section>
+<!-- Section: Informations -->
+<section class="space-y-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-primary">Informations générales</h3>
+<div class="space-y-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Nom du produit</label>
+<input class="w-full bg-slate-100 dark:bg-primary/10 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 h-12 px-4" placeholder="Ex: Maïs blanc de la Comoé" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Catégorie</label>
+<div class="flex overflow-x-auto pb-2 gap-2 no-scrollbar -mx-4 px-4">
+<button class="flex-none flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+<span class="material-symbols-outlined text-lg">grass</span>
+                            Céréales
+                        </button>
+<button class="flex-none flex items-center gap-2 bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-slate-300 px-4 py-2 rounded-full text-sm font-medium border border-transparent hover:border-primary/30">
+<span class="material-symbols-outlined text-lg">nutrition</span>
+                            Légumes
+                        </button>
+<button class="flex-none flex items-center gap-2 bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-slate-300 px-4 py-2 rounded-full text-sm font-medium border border-transparent hover:border-primary/30">
+<span class="material-symbols-outlined text-lg">forest</span>
+                            Fruits
+                        </button>
+<button class="flex-none flex items-center gap-2 bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-slate-300 px-4 py-2 rounded-full text-sm font-medium border border-transparent hover:border-primary/30">
+<span class="material-symbols-outlined text-lg">psychiatry</span>
+                            Tubercules
+                        </button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Description</label>
+<textarea class="w-full bg-slate-100 dark:bg-primary/10 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 p-4" placeholder="Détaillez la qualité, la variété et les conditions de stockage..." rows="4"></textarea>
+</div>
+</div>
+</section>
+<!-- Section: Prix et Quantité -->
+<section class="space-y-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-primary">Prix et Stock</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Prix (FCFA)</label>
+<input class="w-full bg-slate-100 dark:bg-primary/10 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 h-12 px-4" placeholder="0.00" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Unité</label>
+<select class="w-full bg-slate-100 dark:bg-primary/10 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 h-12 px-4">
+<option>le kg</option>
+<option>le sac (50kg)</option>
+<option>le sac (100kg)</option>
+<option>la tonne</option>
+<option>l'unité</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 col-span-2">
+<label class="text-sm font-medium">Quantité disponible</label>
+<input class="w-full bg-slate-100 dark:bg-primary/10 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 h-12 px-4" placeholder="Ex: 50" type="number"/>
+</div>
+</div>
+</section>
+<!-- Section: Localisation -->
+<section class="space-y-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-primary">Localisation</h3>
+<div class="space-y-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Ville / Localité</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">location_on</span>
+<input class="w-full bg-slate-100 dark:bg-primary/10 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 pl-10 h-12 pr-4" placeholder="Ex: Bobo-Dioulasso" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Adresse précise</label>
+<input class="w-full bg-slate-100 dark:bg-primary/10 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 h-12 px-4" placeholder="Ex: Secteur 22, route de l'aéroport" type="text"/>
+</div>
+<!-- Map Placeholder -->
+<div class="relative h-[200px] w-full rounded-xl overflow-hidden border border-primary/20 bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center grayscale opacity-60 dark:opacity-40" data-alt="Carte de localisation stylisée avec un marqueur vert" data-location="Bobo-Dioulasso, Burkina Faso" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgrxW_9C1bYgYqAUV2XLcQaw92i-llMcJL6ZWBTcWYIIG37EBORhIJxwYGVDDKglJSPCs6CoyLbe71mXuF5xx_IVTabuoU8V7cRq5tiyj6FoB7txsHzaKckGZhfi-fN3dXoVlwee2MBzLLqAOVoZbbLoX1sJmJUT1UjuAGbw9154TV2OOhDaI97wFvFa3__dsnxT9glOouDMXP2o6mNJgd4Abh0TjHkGaKPhpOZrTlcx0Se96rq-SYfjAeTOg9WmNOfqyqrtkhb5Y')"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl drop-shadow-lg" style="font-variation-settings: 'FILL' 1">location_on</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Disponibilité -->
+<section class="flex items-center justify-between p-4 bg-primary/5 rounded-xl border border-primary/20">
+<div>
+<p class="font-semibold">Disponibilité immédiate</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Le produit sera visible à la vente</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-6 bg-slate-300 peer-focus:outline-none dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</section>
+</main>
+<!-- Bottom Action Button -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-primary/10">
+<button class="w-full max-w-md mx-auto flex items-center justify-center gap-2 bg-[#16a34a] hover:bg-[#15803d] text-white h-14 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined">inventory_2</span>
+            Publier mon produit
+        </button>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

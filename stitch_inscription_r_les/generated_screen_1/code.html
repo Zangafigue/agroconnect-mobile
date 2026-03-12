@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConnect BF - Mes Commandes</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<!-- Tailwind Configuration for Theme Customization -->
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#16a34a',
+            darkBg: '#0f172a',
+            cardBg: '#1e293b'
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-scrollbar">
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+  </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans min-h-screen pb-20">
+<!-- BEGIN: Header -->
+<header class="sticky top-0 z-50 bg-darkBg border-b border-slate-800 px-4 py-4" data-purpose="main-header">
+<div class="flex items-center gap-3">
+<span class="material-icons text-primary text-2xl">shopping_cart</span>
+<h1 class="text-xl font-bold tracking-tight">Mes commandes</h1>
+</div>
+</header>
+<!-- END: Header -->
+<!-- BEGIN: Navigation Tabs -->
+<nav class="sticky top-[65px] z-40 bg-darkBg border-b border-slate-800" data-purpose="status-tabs">
+<div class="flex overflow-x-auto whitespace-nowrap px-4 no-scrollbar">
+<button class="py-3 px-4 border-b-2 border-primary text-primary font-medium text-sm flex items-center gap-2">
+        En attente <span class="bg-slate-800 text-xs px-2 py-0.5 rounded-full">2</span>
+</button>
+<button class="py-3 px-4 border-b-2 border-transparent text-slate-400 font-medium text-sm flex items-center gap-2">
+        Confirmées <span class="bg-slate-800 text-xs px-2 py-0.5 rounded-full">1</span>
+</button>
+<button class="py-3 px-4 border-b-2 border-transparent text-slate-400 font-medium text-sm flex items-center gap-2">
+        En livraison <span class="bg-slate-800 text-xs px-2 py-0.5 rounded-full">1</span>
+</button>
+<button class="py-3 px-4 border-b-2 border-transparent text-slate-400 font-medium text-sm">
+        Historique
+      </button>
+</div>
+</nav>
+<!-- END: Navigation Tabs -->
+<!-- BEGIN: Main Content -->
+<main class="p-4 space-y-4" data-purpose="orders-list">
+<!-- BEGIN: Order Card 1 (Pending) -->
+<article class="bg-cardBg rounded-xl p-4 shadow-lg border border-slate-700/50" data-purpose="order-card">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<span class="material-icons text-slate-400 text-sm">shopping_basket</span>
+<span class="font-bold text-sm tracking-wide">Commande #045</span>
+</div>
+<span class="bg-orange-500/10 text-orange-500 text-[10px] font-bold px-2 py-1 rounded uppercase flex items-center gap-1 border border-orange-500/20">
+<span class="material-icons text-xs">schedule</span>
+          En attente
+        </span>
+</div>
+<div class="space-y-2 mb-4">
+<h2 class="text-base font-semibold">Maïs sec · 10 sacs</h2>
+<div class="flex items-center gap-2 text-slate-400 text-sm">
+<span class="material-icons text-xs">person</span>
+<span>Amadou Kaboré</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-icons text-xs">payments</span>
+<span>50 000 FCFA produits</span>
+</div>
+<div class="flex items-center gap-2 text-slate-400 text-sm">
+<span class="material-icons text-xs">place</span>
+<span>Livraison: Ouagadougou, Secteur 15</span>
+</div>
+</div>
+<div class="bg-slate-900/50 rounded-lg p-3 mb-4 text-xs text-slate-400 italic flex items-center gap-2">
+<span class="material-icons text-xs">info</span>
+        Attendez la confirmation du vendeur...
+      </div>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-2 px-4 rounded-lg border border-slate-600 text-slate-300 font-medium text-sm flex items-center justify-center gap-2 active:bg-slate-800 transition-colors">
+<span class="material-icons text-sm">close</span>
+          Annuler
+        </button>
+<button class="py-2 px-4 rounded-lg border border-primary text-primary font-medium text-sm flex items-center justify-center gap-2 active:bg-primary/10 transition-colors">
+<span class="material-icons text-sm">chat</span>
+          Contacter vendeur
+        </button>
+</div>
+</article>
+<!-- END: Order Card 1 -->
+<!-- Placeholder for visual depth in UI -->
+<div class="opacity-40 pointer-events-none">
+<!-- BEGIN: Order Card 2 (Confirmed Example) -->
+<article class="bg-cardBg rounded-xl p-4 shadow-lg border border-slate-700/50">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<span class="material-icons text-slate-400 text-sm">shopping_basket</span>
+<span class="font-bold text-sm tracking-wide">Commande #043</span>
+</div>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded uppercase flex items-center gap-1 border border-primary/20">
+<span class="material-icons text-xs">check_circle</span>
+            Confirmée
+          </span>
+</div>
+<div class="space-y-2 mb-4">
+<h2 class="text-base font-semibold">Sorgho · 20 sacs</h2>
+<div class="flex items-center gap-2 text-slate-400 text-sm">
+<span class="material-icons text-xs">person</span>
+<span>Ibrahim Sawadogo</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-icons text-xs">payments</span>
+<span>70 000 FCFA</span>
+</div>
+</div>
+<div class="bg-orange-500/10 border border-orange-500/20 rounded-lg p-3 mb-4 text-sm">
+<div class="flex items-center gap-2 text-orange-500 font-bold mb-1">
+<span class="material-icons text-xs">bolt</span>
+            Action requise
+          </div>
+<p class="text-xs text-slate-300">3 offres de transport reçues!</p>
+</div>
+<button class="w-full py-3 bg-primary text-white rounded-lg font-bold text-sm flex items-center justify-center gap-2">
+<span class="material-icons text-sm">local_shipping</span>
+          Voir les offres transport
+        </button>
+</article>
+<!-- END: Order Card 2 -->
+</div>
+</main>
+<!-- END: Main Content -->
+<!-- BEGIN: Bottom Navbar -->
+<footer class="fixed bottom-0 left-0 right-0 bg-darkBg border-t border-slate-800 px-2 py-1 flex justify-around items-center" data-purpose="bottom-navigation">
+<button class="flex flex-col items-center p-2 text-slate-500">
+<span class="material-icons">home</span>
+<span class="text-[10px] mt-1 font-medium">Accueil</span>
+</button>
+<button class="flex flex-col items-center p-2 text-slate-500">
+<span class="material-icons">search</span>
+<span class="text-[10px] mt-1 font-medium">Catalogue</span>
+</button>
+<button class="flex flex-col items-center p-2 text-primary">
+<span class="material-icons">receipt_long</span>
+<span class="text-[10px] mt-1 font-medium">Commandes</span>
+</button>
+<button class="flex flex-col items-center p-2 text-slate-500 relative">
+<span class="material-icons">forum</span>
+<span class="text-[10px] mt-1 font-medium">Messages</span>
+<span class="absolute top-2 right-4 w-2 h-2 bg-red-500 rounded-full border border-darkBg"></span>
+</button>
+<button class="flex flex-col items-center p-2 text-slate-500">
+<span class="material-icons">person_outline</span>
+<span class="text-[10px] mt-1 font-medium">Profil</span>
+</button>
+</footer>
+<!-- END: Bottom Navbar -->
+</body></html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Header -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 ml-2">Paramètres</h2>
+</div>
+<div class="flex flex-col pb-10">
+<!-- Section 1: Apparence -->
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider px-4 pb-2 pt-6">Apparence</h3>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Mode sombre</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 transition-colors has-[:checked]:bg-primary">
+<input checked="" class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transition-transform translate-x-0 peer-checked:translate-x-[20px]"></div>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">translate</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Langue</p>
+</div>
+<div class="shrink-0 flex items-center gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-base">Français</p>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+<!-- Section 2: Notifications -->
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider px-4 pb-2 pt-8">Notifications</h3>
+<!-- Nouvelles missions -->
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Nouvelles missions</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 transition-colors has-[:checked]:bg-primary">
+<input checked="" class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transition-transform translate-x-0 peer-checked:translate-x-[20px]"></div>
+</label>
+</div>
+</div>
+<!-- Offres acceptées -->
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Offres acceptées</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 transition-colors has-[:checked]:bg-primary">
+<input checked="" class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transition-transform translate-x-0 peer-checked:translate-x-[20px]"></div>
+</label>
+</div>
+</div>
+<!-- Messages -->
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Messages</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 transition-colors has-[:checked]:bg-primary">
+<input checked="" class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transition-transform translate-x-0 peer-checked:translate-x-[20px]"></div>
+</label>
+</div>
+</div>
+<!-- Paiements -->
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Paiements</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 transition-colors has-[:checked]:bg-primary">
+<input checked="" class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transition-transform translate-x-0 peer-checked:translate-x-[20px]"></div>
+</label>
+</div>
+</div>
+<!-- Section 3: Sécurité -->
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider px-4 pb-2 pt-8">Sécurité</h3>
+<button class="flex items-center gap-4 px-4 min-h-[64px] justify-between w-full text-left hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">lock_reset</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Changer mon mot de passe</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</button>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Email vérifié</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-primary fill-1">check_circle</span>
+</div>
+</div>
+<!-- Section 4: Support & Aide -->
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider px-4 pb-2 pt-8">Support &amp; Aide</h3>
+<button class="flex items-center gap-4 px-4 min-h-[64px] justify-between w-full text-left hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">help</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Centre d'aide</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</button>
+<button class="flex items-center gap-4 px-4 min-h-[64px] justify-between w-full text-left hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Contacter le service client</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</button>
+<button class="flex items-center gap-4 px-4 min-h-[64px] justify-between w-full text-left hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">report</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Signaler un problème</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</button>
+<!-- Section 5: À propos -->
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider px-4 pb-2 pt-8">À propos</h3>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">info</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Version</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base">v1.0.0</p>
+</div>
+<button class="flex items-center gap-4 px-4 min-h-[64px] justify-between w-full text-left hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">description</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Conditions d'utilisation</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</button>
+<button class="flex items-center gap-4 px-4 min-h-[64px] justify-between w-full text-left hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Politique de confidentialité</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</button>
+<!-- Bottom: Logout Button -->
+<div class="px-4 mt-12 mb-8">
+<button class="w-full flex items-center justify-center gap-2 py-4 rounded-xl border-2 border-red-500/50 text-red-500 font-bold hover:bg-red-500/10 transition-colors">
+<span class="material-symbols-outlined">logout</span>
+                    Se déconnecter
+                </button>
+</div>
+<p class="text-center text-slate-500 dark:text-slate-600 text-xs mb-8">
+                AgroConnect BF © 2024 - Transporter Portal
+            </p>
+</div>
+</div>
+</body></html>

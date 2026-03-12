@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#120d0a",
+                        "neutral-dark": "#1c1410",
+                        "border-dark": "#2d1f18",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>AgroConnect BF - Messages</title>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-border-dark px-4 py-4">
+<div class="flex items-center justify-between max-w-2xl mx-auto">
+<div class="flex items-center gap-3">
+<h1 class="text-xl font-bold tracking-tight">Messages</h1>
+</div>
+<div class="relative">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-neutral-dark transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<span class="absolute top-2 right-2 flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</div>
+</div>
+</header>
+<!-- Search & Filters -->
+<div class="px-4 py-4 max-w-2xl mx-auto w-full space-y-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-100 dark:bg-neutral-dark border-none rounded-xl py-3 pl-10 pr-4 focus:ring-2 focus:ring-primary text-sm" placeholder="Rechercher des conversations" type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="px-4 py-1.5 bg-primary text-white rounded-full text-sm font-medium">Tous</button>
+<button class="px-4 py-1.5 bg-slate-100 dark:bg-neutral-dark text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium">Non lus</button>
+<button class="px-4 py-1.5 bg-slate-100 dark:bg-neutral-dark text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium">Agriculteurs</button>
+<button class="px-4 py-1.5 bg-slate-100 dark:bg-neutral-dark text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium">Logistique</button>
+</div>
+</div>
+<!-- Message List -->
+<main class="flex-1 max-w-2xl mx-auto w-full px-4 pb-24">
+<div class="space-y-1">
+<!-- Conversation 1: Moussa Traoré -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-neutral-dark cursor-pointer transition-colors border-b border-slate-100 dark:border-border-dark/50">
+<div class="relative">
+<div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="Portrait of an African male farmer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANlvfwow_S_8uAdSlTGbkyg8nJ6w2jo2XAC51yMiWxpznxlJTzLB4j1dek36Mp-Eme7JzwIVnIjWtJytykbypfJDu3H-JD-Utn1mwuUqO2XrVE5QVJRZDWGKr66rc0Lus7YkhD9pByrV4fl-SFAMFeI_UKcFkl-Nk4q3qKn-uEr4MT8arRexjFtKPLP9XNYp6BMmpfhYy7E5ulOyNBcrDqIbQzwktdmtm_dNI2YiAadfTKfwT_GUE2NyM2M77d6VEAUw2nNRa83VE"/>
+</div>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-background-light dark:border-background-dark rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 truncate">Moussa Traoré (Agriculteur)</h3>
+<span class="text-xs text-primary font-bold">12:45</span>
+</div>
+<div class="flex justify-between items-center gap-2">
+<p class="text-sm text-slate-900 dark:text-slate-100 font-semibold truncate">L'engrais biologique est prêt...</p>
+<span class="flex-shrink-0 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">1</span>
+</div>
+</div>
+</div>
+<!-- Conversation 2: Abdoulaye Diallo -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-neutral-dark cursor-pointer transition-colors border-b border-slate-100 dark:border-border-dark/50">
+<div class="w-14 h-14 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="Close up of a professional driver" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlYlURtIOxgGCdMA368gS27dTlGS7NRGUDFRo1ruJN8UMb9cMdnw_fQWERjKm4PkY7LG1qvK8w9409vRisMCBHXwk5RKqJZZ_IWcOlnQzNmpZR9cNSja2QHRqw4Za3HoST0zf10g9axzs1rNeTfju6MjqV7J83ID8F6VZRbb4pwfKOe05MTBTBp2CexmrRcohDdxemCI3AcTb4va1vOgkTz3-FAO03YU23pUIRKXqi8dcihdtu7-GyytHnkwvQrsYSmaMkmsjwxFA"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-medium text-slate-900 dark:text-slate-100 truncate">Abdoulaye Diallo (Transporteur)</h3>
+<span class="text-xs text-slate-500">10:20</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate">J'arriverai à l'entrepôt dans 30 minutes.</p>
+</div>
+</div>
+<!-- Conversation 3: Awa Konaté -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-neutral-dark cursor-pointer transition-colors border-b border-slate-100 dark:border-border-dark/50">
+<div class="w-14 h-14 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="Portrait of an African woman merchant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6iJuv5iaduWL_raBL1EhRFA1IliCctkiv-00CdnC5Zu7RxPq3nOiCT1doyuBjmodLCr0mxlh12ywbXwgnnzXEWnjQwamip9xAVIcjOMZMLbol8p4XHYBQiDNgSlxYFctazL8gUCuMgIa8XwtMOpsjQK1L6-8pV5Vi81BIpJfA5-bYvzqEwkO6ESZHkxpvly8XAMcxJ_4WNdO71nKV2JBWn-D9USHMulG-iN0s1-3fyfDrh81yrgiXmNeHg0n9gsg9I6FuH3HfaBY"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-medium text-slate-900 dark:text-slate-100 truncate">Awa Konaté (Acheteur/Vendeur)</h3>
+<span class="text-xs text-slate-500">Hier</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-blue-500">done_all</span>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate">Merci pour le paiement rapide...</p>
+</div>
+</div>
+</div>
+<!-- Conversation 4: Sékou Ouédraogo -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-neutral-dark cursor-pointer transition-colors border-b border-slate-100 dark:border-border-dark/50">
+<div class="w-14 h-14 rounded-full bg-slate-200 dark:bg-neutral-dark flex items-center justify-center text-slate-500 overflow-hidden">
+<span class="material-symbols-outlined text-3xl">account_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-medium text-slate-900 dark:text-slate-100 truncate">Sékou Ouédraogo (Transporteur)</h3>
+<span class="text-xs text-slate-500">Hier</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate">La route vers Bobo est actuellement bloquée...</p>
+</div>
+</div>
+<!-- Conversation 5: Fatou Sawadogo -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-neutral-dark cursor-pointer transition-colors">
+<div class="w-14 h-14 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="African woman farmer in traditional clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ0IlMCgFdzNEa8R2HsoLV_R3VLA7AfFTRU1GMaqVxARerdGiz1Po5XSoD4whZQs71KB6dWyG-YwQOKNbYO9Kdm0RtarU-wUw3qud7y2EiYVoEYJbiNFcglmK2lTeB_ppUasuWfNUhVqUTVQ1RETYlKApDyVUuMCcfFtUZO4BZSjAatWUtg1EK_3ViaSpCBRF_H26GeZgnVfl4z0GAa1Ym9VwAGKCUO4ygcMiiEgHgWwby5VBB3maHxLvlnVa30qQhvc_nuqWDaZk"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-medium text-slate-900 dark:text-slate-100 truncate">Fatou Sawadogo (Agriculteur)</h3>
+<span class="text-xs text-slate-500">Mardi</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate">La facture #8842 a été générée...</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl">edit_square</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-neutral-dark border-t border-slate-200 dark:border-border-dark px-4 pb-6 pt-2">
+<div class="max-w-2xl mx-auto flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 px-3 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 px-3 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-medium">Catalogue</span>
+</a>
+<a class="flex flex-col items-center gap-1 px-3 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Commandes</span>
+</a>
+<a class="flex flex-col items-center gap-1 px-3 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">chat_bubble</span>
+<span class="text-[10px] font-bold">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 px-3 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>

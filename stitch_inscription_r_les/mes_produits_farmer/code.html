@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between px-4 py-4 bg-background-light dark:bg-background-dark border-b border-primary/10">
+<h1 class="text-xl font-bold tracking-tight">Mes produits</h1>
+<button class="flex size-10 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+</header>
+<!-- Filter Bar -->
+<div class="flex gap-2 overflow-x-auto px-4 py-3 no-scrollbar shrink-0">
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary px-4 text-sm font-semibold text-white">
+                Tous (8)
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary/10 px-4 text-sm font-medium text-primary border border-primary/20">
+                Disponibles (6)
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary/10 px-4 text-sm font-medium text-primary border border-primary/20">
+                Indisponibles (1)
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary/10 px-4 text-sm font-medium text-primary border border-primary/20">
+                Rupture (1)
+            </button>
+</div>
+<!-- Product List -->
+<main class="flex-1 overflow-y-auto px-4 pb-24 space-y-4">
+<!-- Product Card 1: Maïs sec -->
+<div class="rounded-xl bg-white dark:bg-primary/5 p-4 shadow-sm border border-slate-200 dark:border-primary/10">
+<div class="flex gap-4">
+<div class="size-20 shrink-0 rounded-lg bg-center bg-cover border border-slate-100 dark:border-primary/20" data-alt="Sacks of dried yellow corn in a warehouse" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABeEwiI7JWDyJUn9w3o90YmQJHXvTgno80P7o5KD-3jhLb3pN8Y0YLnp7sEZcb9MDQL7DLK12Bic-SjIhfofDJj_Au6y_04du_Cjmk6iPP8y26qC2rXOgNC5d_1MxXoYJ3jbOWZRYvIRlCnwLybjxZO82voDk4l-xHLNdhP29PsoeoSRr6fHHn1u2S7EUGFpFyMrZNBvJ-vWCZk5klkwTgmw69oKAOz2hbODmh1srhewvchRwJwJzm2AUGGgcW_N7NEsmYim7uUzc');">
+</div>
+<div class="flex flex-1 flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-base font-bold">Maïs sec</h3>
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:text-green-400 mt-1">
+                                    Disponible
+                                </span>
+</div>
+<p class="text-sm font-bold text-primary">5 000 FCFA <span class="text-[10px] font-normal text-slate-500">/ sac</span></p>
+</div>
+<div class="mt-2 space-y-1">
+<div class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[14px]">inventory_2</span>
+<span>500 kg · 50 sacs</span>
+</div>
+<div class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span data-location="Bobo-Dioulasso">Bobo-Dioulasso • 08 mars</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-end gap-2 border-t border-slate-100 dark:border-primary/10 pt-3">
+<button class="flex size-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2: Arachides -->
+<div class="rounded-xl bg-white dark:bg-primary/5 p-4 shadow-sm border border-slate-200 dark:border-primary/10">
+<div class="flex gap-4">
+<div class="size-20 shrink-0 rounded-lg bg-center bg-cover border border-slate-100 dark:border-primary/20" data-alt="Raw peanuts in shells on a wooden surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZP11BrN6TI_nCOLZiWtwEukHIfa6zS77OP_GKGPptKaFZns_IG2ion2w8KRn0dt26oNFAWKkoImIyWI88528fCqFXaK3CeeyyOEcMNvztDD7g2D4x7X87HGPw_bbMlev6VDO5yhrW9PKOM8dRDAmdPi0N92L-jwTA_5F-h0DdSGFEAyfiqqLbda06oKq_hnZ-m693HWzH5Y4gM9J0txd_nR283ex-2NqZQLKgRCVBLr-NrcAfF5ngc2uuLlhzlkW5-tk43KoTuKA');">
+</div>
+<div class="flex flex-1 flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-base font-bold">Arachides</h3>
+<span class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900/30 px-2.5 py-0.5 text-xs font-medium text-red-700 dark:text-red-400 mt-1">
+                                    Rupture de stock
+                                </span>
+</div>
+<p class="text-sm font-bold text-primary">8 500 FCFA <span class="text-[10px] font-normal text-slate-500">/ sac</span></p>
+</div>
+<div class="mt-2 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span data-location="Koudougou">Koudougou • 12 mars</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between border-t border-slate-100 dark:border-primary/10 pt-3">
+<button class="text-sm font-semibold text-primary px-3 py-1 rounded-lg bg-primary/10">
+                        Réapprovisionner
+                    </button>
+<div class="flex gap-2">
+<button class="flex size-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3: Sorgho blanc -->
+<div class="rounded-xl bg-white/60 dark:bg-primary/5 opacity-70 p-4 shadow-sm border border-slate-200 dark:border-primary/10">
+<div class="flex gap-4">
+<div class="size-20 shrink-0 rounded-lg bg-center bg-cover grayscale" data-alt="White sorghum grains close up" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDeYBSpIawgPLPSahNwknFLNzzJAnxMbyrayrvTtyjtP5osDOiedeNxEC6s6KnnFt2TMfLg6KRt-gq1fnY7CpDe_6t0Jo1GevQ6TabYwXZY2XXALa5yfYyuHJx8eMJ7wFcoU7eo3colXs8VhDrXCzmv5qDP60Pdm0rSyTOj6VtQYmB3McEWOxcHEr3SuExhihnw8NPsGjXTTQvkf4RB1143unZWuL4goUrUh1MZl3KGbUxPhCfokAG3lOvHCtwXYdxrN0Vqylgo4wo');">
+</div>
+<div class="flex flex-1 flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-base font-bold">Sorgho blanc</h3>
+<span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-400 mt-1">
+                                    Indisponible
+                                </span>
+</div>
+<p class="text-sm font-bold text-slate-400">4 500 FCFA</p>
+</div>
+<div class="mt-2 text-xs text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span data-location="Ouagadougou">Ouagadougou • 05 mars</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between border-t border-slate-100 dark:border-primary/10 pt-3">
+<button class="text-sm font-semibold text-primary px-3 py-1 rounded-lg bg-primary/10">
+                        Remettre en vente
+                    </button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="absolute bottom-24 right-4 flex size-14 items-center justify-center rounded-full bg-primary text-white shadow-2xl z-10">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navbar -->
+<nav class="absolute bottom-0 left-0 right-0 flex h-20 items-center justify-around bg-white dark:bg-[#1f2d20] border-t border-primary/10 px-2 pb-2">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/60" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">inventory_2</span>
+<span class="text-[10px] font-bold">Produits</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/60" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-[10px] font-medium">Commandes</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/60" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/60" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</nav>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

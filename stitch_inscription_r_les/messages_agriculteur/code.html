@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConnect BF - Messages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f33",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark border-b border-primary/20 p-4 flex items-center justify-between">
+<h1 class="text-xl font-bold text-primary tracking-tight">AgroConnect BF</h1>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-red-500"></span>
+</button>
+</header>
+<!-- Filters/Tabs -->
+<nav class="bg-background-light dark:bg-background-dark px-4 pt-2">
+<div class="flex border-b border-primary/10">
+<button class="flex-1 py-3 text-sm font-semibold border-b-2 border-primary text-primary">
+                All
+            </button>
+<button class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 dark:text-slate-400">
+                Buyers
+            </button>
+<button class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 dark:text-slate-400">
+                Transporters
+            </button>
+</div>
+</nav>
+<!-- Search Bar (Custom added for better UX) -->
+<div class="px-4 py-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-primary/5 border border-primary/10 rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 text-slate-200" placeholder="Search conversations..." type="text"/>
+</div>
+</div>
+<!-- Messages List -->
+<main class="flex-1 overflow-y-auto">
+<!-- Conversation Item 1 -->
+<div class="flex items-center gap-4 px-4 py-4 hover:bg-primary/5 transition-colors cursor-pointer border-b border-primary/5">
+<div class="relative shrink-0">
+<div class="h-14 w-14 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/10">
+<img class="h-full w-full object-cover" data-alt="Portrait of a smiling male buyer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfunqKXUkvJ7B93TYQSyDjF508GnhCFiEdVfZxDDj8vvjuUuWpxkfmdib7ELE0Nu6bieCCmoAxKZZq61Mus-9xGSuARjmau1FDal27h1t28ugdHPwtEYaM5oKkgkgtcYrlNZA1692vv2-Q0MzMsPoDHXUHTtaxlPwjSNB6ZlGp7yW6Ad6rx7BysI7bH3b9DJ3v79h2xzvNaER6Rpk7Pp_l8K-U-d40ZT0WYGum7fv-wUa2SwHImAxfhSGclIouHNguBRJZh2ZNrKE"/>
+</div>
+<span class="absolute bottom-0 right-0 h-3.5 w-3.5 bg-green-500 border-2 border-background-dark rounded-full"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="font-semibold text-slate-100 truncate">Ibrahim Traoré</h3>
+<span class="text-xs text-slate-400">10:30 AM</span>
+</div>
+<p class="text-sm text-primary font-medium mb-0.5 truncate">White Maize Offer</p>
+<p class="text-sm text-slate-400 truncate leading-snug">Can you deliver 50kg of maize to Ouagadougou tomorrow morning?</p>
+</div>
+<div class="shrink-0 ml-2">
+<div class="h-12 w-12 rounded-lg bg-primary/10 overflow-hidden border border-primary/20">
+<img class="h-full w-full object-cover" data-alt="Close up of dried white maize kernels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZLxWIo0oLgspVFAkhD1XAtDpcQZZSodFVKHyldUDMt7bLbus4So3nMEqlFZAPYqJUpWXQB7tSKwILsFES_PjfWKR0kypFAXCQdKz4QWfmyXtY5cMnBZR0iBJgEk8JforgdDLdOpfbj2QHqUWbUYw9EN15HyrzJ9VIjucX46Wp-PBCYtb06xRxrD-2mc2wcHJxVCRx28cLh3t4QzuT5gcCQj3Xie8VlbCChGKoL4lGTmYrqGqXwyOLsgVs8qfsCPpLViYEHxi0k_M"/>
+</div>
+</div>
+</div>
+<!-- Conversation Item 2 -->
+<div class="flex items-center gap-4 px-4 py-4 hover:bg-primary/5 transition-colors cursor-pointer border-b border-primary/5">
+<div class="shrink-0">
+<div class="h-14 w-14 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/10">
+<img class="h-full w-full object-cover" data-alt="Portrait of a female business woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXobX-IO_PZNGn-VcEDa_EPIqdFvLWplotPL6SMYUXjxSBCbrtsBlURx0wl28pnfMZ2DVav6m5bsNqzMttqdRVgf5XxKys1LQXg7JlfzBu7n4MefYHqvQlpQhDcWnlo8SSwIIC0syAK_TaylUytkL3d96HS9JU4j_058aQkDDUlf-Iw_WhHslkpEyN-cuAmqW2qh7VDfJoR9AuELrfnAkq8LvMa3FeZompGOHEkWzo37DIuZRPlIy5uu6HWOX3cTzp-UK3YeCHLwM"/>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="font-semibold text-slate-100 truncate">Fatoumata Diallo</h3>
+<span class="text-xs text-slate-400">Yesterday</span>
+</div>
+<p class="text-sm text-primary font-medium mb-0.5 truncate">Transport: Logistics BF</p>
+<p class="text-sm text-slate-100 font-medium truncate leading-snug">The truck is arriving at the farm gate now. Please have the load ready.</p>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0 ml-2">
+<div class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">1</div>
+<div class="h-12 w-12 rounded-lg bg-primary/10 overflow-hidden border border-primary/20">
+<img class="h-full w-full object-cover" data-alt="Large commercial delivery truck on road" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOu1diVRAsSpLmQahUOyy-qIN8bbeh7ST4aPdAbQkt1bHN3sHWkZchiIRv6TfvgczVuuAWP1KYT8r07VthOOP3P_w_m848wSg0Y7N6HIZVXKrsb4nwgHrdDkVQCgfcfppt_4ibbYGUfV26jbbEenMH8AeQZ99Bw4x9DL-ymccjOlNZiCOjK5hPPmJul3uOmMPBDXnEs96a3nfmmvlaVsWbh59GyiCIfO1oeb0t5g65ep54RvCFt6MSX-PHD4DUaOsGkEpIzOh1oiQ"/>
+</div>
+</div>
+</div>
+<!-- Conversation Item 3 -->
+<div class="flex items-center gap-4 px-4 py-4 hover:bg-primary/5 transition-colors cursor-pointer border-b border-primary/5">
+<div class="shrink-0">
+<div class="h-14 w-14 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/10">
+<img class="h-full w-full object-cover" data-alt="Portrait of a male farmer or trader" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6frIzaxhv69ymqEwmOpHWW4WLdV8MvF1q_hVjT6WphM11ZmkOZhPt9gxxebu9AJSZVIMwkZ8zetyGLK_-nu1J_H1mldZ7eX3Cqp_gwKhFmSqkaNwMObJxWaJq2yBTjvHJ27r5u7fDJu_vJXAyu1DHWEZQ2naaIg7j3Ds66oVk1_4maDSDvXCITlS82pZmwMMjOUBofBIJeaSflBIJ0lV6gFx-DPRuOebwPLPnJOBqiB44jjzHOBWMKWXpO7SGxVUCPwZlW_ndJbU"/>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="font-semibold text-slate-100 truncate">Moussa Sawadogo</h3>
+<span class="text-xs text-slate-400">Mon</span>
+</div>
+<p class="text-sm text-primary font-medium mb-0.5 truncate">Fresh Tomatoes</p>
+<p class="text-sm text-slate-400 truncate leading-snug">The quality of the last batch was excellent. I'll need double next week.</p>
+</div>
+<div class="shrink-0 ml-2">
+<div class="h-12 w-12 rounded-lg bg-primary/10 overflow-hidden border border-primary/20">
+<img class="h-full w-full object-cover" data-alt="Fresh red tomatoes in a wooden crate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCpMIw9UFf5GnCbaKO4JzNKp1j7FFzxFA8-lUZJgk5RZeJ3ind93XZUODhLiwINVtffm0dHdzNxCCENtm-J6FwiXa3pKxibw_-PFhplo9ca9615mBRgfOXzW06cEImH9F_pt0xO14dFaFDwRoSKeMtqOJcx365tPN9HvoV4FVfqdouLiBY3oWPVmjzzdRGpC4qnXDTAEpZMFMD68jJqujV-2XPRuMrmAdziMfSiFFrOoaJsvghBzQfX-n-ZWK576rG9RNKXEGOVqg"/>
+</div>
+</div>
+</div>
+<!-- Conversation Item 4 -->
+<div class="flex items-center gap-4 px-4 py-4 hover:bg-primary/5 transition-colors cursor-pointer border-b border-primary/5">
+<div class="shrink-0">
+<div class="h-14 w-14 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/10">
+<img class="h-full w-full object-cover" data-alt="Portrait of a young female entrepreneur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy-dNVlA9YwwJOSBBfG8yF1E-T8MMOxPQdUZW_N7SjfnpHuTowQ8rqBXD3NbHSKU06H0J0tSDzg5P4hvdiTS-gKBdbXfy--Rkqa6HQ788n3BexLV1Q0jg--kUsjOJ6Dthyn4uo88ICvEK1a26zSbg5gJG4o2NMIhc-E65CVT50xMUtKocL27Eesj38t1dW1KrxWBVWPTl5b8gOcMv1U4XYD84_nGJxsxzKgj5Z1pkT9LOE5W_6nLQchWLiv9MM3blUIwTMvz29z5M"/>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="font-semibold text-slate-100 truncate">Alizeta Kaboré</h3>
+<span class="text-xs text-slate-400">Oct 24</span>
+</div>
+<p class="text-sm text-primary font-medium mb-0.5 truncate">Organic Shea Butter</p>
+<p class="text-sm text-slate-400 truncate leading-snug">Sent you the payment confirmation via Orange Money.</p>
+</div>
+<div class="shrink-0 ml-2">
+<div class="h-12 w-12 rounded-lg bg-primary/10 overflow-hidden border border-primary/20">
+<img class="h-full w-full object-cover" data-alt="Raw shea butter in a ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfeZ8LQCjR8Cf0IsqsVo_1O0G0uesbamEmXOxYAuGH4Q2bLgnwp-IK-19MUtT1D70Ww2Fq4ALS2Sv85zBHgjBfD2dnQK07i5wr6ggJCV1wnczwzdchshlVZmfv-a6TTqGTesXhB7d6hzlnQg3Wuyzr5o1D-KRFmCHP-8wwhXgIrdwaolvQdZsgOXj3J7dHWQ-Qaz3K769rjY_QYa2vpoDc2LTfimp8x7Iuq1tFU7fh14zKNV4cB6g0T3_uODszI1C7ycP94VWX0jo"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="mt-auto bg-background-light dark:bg-background-dark border-t border-primary/20 pb-safe">
+<div class="flex justify-around items-center px-2 py-3">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">home</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">potted_plant</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400">Products</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">receipt_long</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400">Orders</span>
+</a>
+<a class="flex flex-col items-center gap-1 active-tab" href="#">
+<span class="material-symbols-outlined text-primary">chat_bubble</span>
+<span class="text-[10px] font-bold text-primary">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary">person</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400">Profile</span>
+</a>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-24 bg-primary text-white h-14 w-14 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">add_comment</span>
+</button>
+</body></html>
