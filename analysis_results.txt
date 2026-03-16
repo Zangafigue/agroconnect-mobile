@@ -1,0 +1,5 @@
+[info] 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss (C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\shared\screens\visitor_home_screen.dart:71:44)
+[info] 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss (C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\shared\screens\visitor_home_screen.dart:83:57)
+[info] 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss (C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\shared\screens\visitor_home_screen.dart:159:59)
+[info] 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss (C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\shared\screens\visitor_home_screen.dart:218:43)
+[info] 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss (C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\shared\screens\visitor_placeholder_screen.dart:32:49)

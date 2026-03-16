@@ -25,6 +25,7 @@ dependencies:
   # Cartographie GRATUITE (OpenStreetMap — aucune clé API)
   flutter_map: ^6.1.0
   latlong2: ^0.9.0
+  connectivity_plus: ^6.0.3
   http: ^1.2.1
 
   # UI
@@ -38,8 +39,23 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  min_sdk_android: 21
+
+flutter_native_splash:
+  color: "#16a34a"
+  image: "assets/images/logo.png"
+  android: true
+  ios: true
+  fullscreen: true

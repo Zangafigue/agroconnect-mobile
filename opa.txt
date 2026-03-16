@@ -1,0 +1,4 @@
+﻿C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\buyer\screens\buyer_home_screen.dart:381:color: AppConfig.primaryColor.withOpacity(0.1),
+C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\shared\screens\shared_screens.dart:217:BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, -2))
+C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\shared\screens\shared_screens.dart:549:backgroundColor: AppConfig.primaryColor.withOpacity(0.1),
+C:\Users\Hello\OneDrive\Documents\GitHub\agroconnect-mobile\lib\features\transporter\screens\transporter_offers_screen.dart:481:color: AppConfig.primaryColor.withOpacity(0.1),

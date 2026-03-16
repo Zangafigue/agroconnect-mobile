@@ -1,0 +1,3 @@
+﻿   info - Use 'const' with the constructor to improve performance - lib\features\buyer\screens\buyer_screens.dart:645:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\features\buyer\screens\buyer_screens.dart:645:49 - prefer_const_constructors
+

@@ -60,6 +60,7 @@ class _DeliveryMapWidgetState extends State<DeliveryMapWidget> {
     );
 
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(12),

@@ -1,53 +1,13 @@
-import 'package:flutter/material.dart';
+// This file exports all buyer screens to maintain backward compatibility
+// while moving towards a more modular structure.
 
-class BuyerDashboardScreen extends StatelessWidget {
-  const BuyerDashboardScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Catalogue Agricole')),
-      body: const Center(
-        child: Text('Catalogue des produits disponibles avec filtrage'),
-      ),
-    );
-  }
-}
-
-class BuyerOrdersScreen extends StatelessWidget {
-  const BuyerOrdersScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Mes Commandes')),
-      body: const Center(child: Text('Liste des achats (Livraison en cours, Historique)')),
-    );
-  }
-}
-
-class TransportOffersScreen extends StatelessWidget {
-  final String orderId;
-  const TransportOffersScreen({super.key, required this.orderId});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Offres Transport pour #$orderId')),
-      body: const Center(child: Text('Liste des offres reçues par les transporteurs')),
-    );
-  }
-}
-
-class PaymentScreen extends StatelessWidget {
-  final String orderId;
-  const PaymentScreen({super.key, required this.orderId});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Paiement Commande #$orderId')),
-      body: const Center(child: Text('Simulation CinetPay V1 (Escrow)')),
-    );
-  }
-}
+export 'buyer_home_screen.dart';
+export 'buyer_catalogue_screen.dart';
+export 'buyer_orders_screen.dart';
+export 'buyer_chat_list_screen.dart';
+export 'buyer_chat_detail_screen.dart';
+export 'buyer_dispute_screen.dart';
+export 'transport_offers_screen.dart';
+export 'payment_screen.dart';
+export 'buyer_profile_screen.dart';
+export 'buyer_settings_screen.dart';
